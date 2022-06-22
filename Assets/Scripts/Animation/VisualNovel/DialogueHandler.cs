@@ -168,6 +168,11 @@ public class DialogueHandler : ProjectManager<DialogueHandler>
         startDialogue(cantTravelDialogues[1], true);
     }
 
+    public void StartDialogueCantTravelWatch()
+    {
+        startDialogue(cantTravelDialogues[2], true);
+    }
+
    public void SetImageDialoguePosition(Image imageToMove)
    {
         imageToMove.transform.position = dialoguePostion.position;

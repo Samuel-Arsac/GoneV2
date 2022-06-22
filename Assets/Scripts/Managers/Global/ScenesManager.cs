@@ -6,11 +6,6 @@ public class ScenesManager : LocalManager<ScenesManager>
 {
     [SerializeField] private CharacterInfo cantTravelDialogue;
 
-    /*protected override void Awake()
-    {
-        base.Awake();
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }*/
 
     private void Start()
     {
@@ -29,20 +24,20 @@ public class ScenesManager : LocalManager<ScenesManager>
         Debug.Log("Leaving game");
     }
 
-    public void LoadNewZone(string sceneToLoad)
+    /*public void LoadNewZone(string sceneToLoad)
     {
-        if(UIWorldMap.Instance.canTravel)
+        UIWorldMap.Instance.DisplayUIWordlMap();
+        if (UIWorldMap.Instance.canTravel)
         {
             LevelChanger.Instance.FadeToLevel(sceneToLoad);
 
         }
         else
         {
-            UIWorldMap.Instance.DisplayUIWordlMap();
-            DialogueHandler.Instance.startDialogue(cantTravelDialogue, true);
+            DialogueHandler.Instance.StartDialogueCantTravelWatch();
         }
         
-    }
+    }*/
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {

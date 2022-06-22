@@ -22,10 +22,10 @@ public class UIWorldMap : LocalManager<UIWorldMap>
 
 
 
-   [HideInInspector]public bool placeUnlocked = false;
-   [HideInInspector]public bool hangarsUnlocked = false;
-   [HideInInspector]public bool factoriesUnlocked = false;
-   [HideInInspector]public bool marketUnlocked = false;
+    [HideInInspector]public bool placeUnlocked = false;
+    [HideInInspector]public bool hangarsUnlocked = false;
+    [HideInInspector]public bool factoriesUnlocked = false;
+    [HideInInspector]public bool marketUnlocked = false;
 
     [HideInInspector] public bool cantGoToRailway = false;
     [HideInInspector] public bool cantGoToHostel = false;
@@ -61,6 +61,7 @@ public class UIWorldMap : LocalManager<UIWorldMap>
                 EnableActiveZoneButton(buttonsZones[4]);
                 EnableActiveZoneButton(buttonsZones[5]);
                 cantGoToHostel = true;
+                cantGoToRailway = false;
                 break;
 
             case zones.Hangars:
@@ -71,6 +72,7 @@ public class UIWorldMap : LocalManager<UIWorldMap>
                 EnableActiveZoneButton(buttonsZones[4]);
                 EnableActiveZoneButton(buttonsZones[5]);
                 canTravel = false;
+                cantGoToHostel = false;
                 break;
 
             case zones.Usine:

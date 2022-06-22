@@ -22,10 +22,47 @@ public class UIMap_Button : MonoBehaviour
         outlineZone.SetActive(false);
     }
 
-    public void OnClick()
+    public void OnClick(string sceneToLoad)
     {
-        OutlineZoneHide();
-        UIWorldMap.Instance.currentZone = linkedZone;
         
+        if (UIWorldMap.Instance.cantGoToRailway && linkedZone == UIWorldMap.zones.Gare)
+        {
+            Debug.Log("Oui");
+            DialogueHandler.Instance.StartDialogueCantTravelRailway();
+            UIWorldMap.Instance.DisplayUIWordlMap();
+            UIManager.Instance.DisableInteractionEnvironnment();
+        }
+
+        else if(UIWorldMap.Instance.cantGoToHostel && (linkedZone == UIWorldMap.zones.Hôtel || linkedZone == UIWorldMap.zones.Gare))
+        {
+            Debug.Log("Oui2");
+            DialogueHandler.Instance.StartDialogueCantTravelAway();
+            UIWorldMap.Instance.DisplayUIWordlMap();
+            UIManager.Instance.DisableInteractionEnvironnment();
+        }
+
+        else if(UIWorldMap.Instance.canTravel)
+        {
+            Debug.Log("Oui3");
+            UIWorldMap.Instance.currentZone = linkedZone;
+            LevelChanger.Instance.FadeToLevel(sceneToLoad);
+            UIManager.Instance.DisableInteractionEnvironnment();
+
+        }
+        else
+        {
+            Debug.Log("Oui4");
+            UIWorldMap.Instance.DisplayUIWordlMap();
+            DialogueHandler.Instance.StartDialogueCantTravelWatch();
+
+            UIManager.Instance.DisableInteractionEnvironnment();
+        }
+
+        //UIWorldMap.Instance.DisplayUIWordlMap();
+        OutlineZoneHide();
+
+
+
+
     }
 }

@@ -3350,21 +3350,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8525004921411765488}
-          m_TargetAssemblyTypeName: UIWorldMap, Assembly-CSharp
-          m_MethodName: DisplayUIWordlMap
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2551238289436102723}
-          m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-          m_MethodName: LoadNewZone
+        - m_Target: {fileID: 4769234235846974530}
+          m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
+          m_MethodName: OnClick
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3374,9 +3362,9 @@ MonoBehaviour:
             m_StringArgument: Hangars
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 4769234235846974530}
-          m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
-          m_MethodName: OnClick
+        - m_Target: {fileID: 8525004921411765488}
+          m_TargetAssemblyTypeName: UIWorldMap, Assembly-CSharp
+          m_MethodName: DisplayUIWordlMap
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10991,13 +10979,13 @@ MonoBehaviour:
         - m_Target: {fileID: 8852358276920361537}
           m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
           m_MethodName: OnClick
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: "H\xF4tel"
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 8525004921411765488}
@@ -11010,18 +10998,6 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2551238289436102723}
-          m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-          m_MethodName: LoadNewZone
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: "H\xF4tel"
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1397947044053609358
@@ -11599,13 +11575,13 @@ MonoBehaviour:
         - m_Target: {fileID: 2344597767867044677}
           m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
           m_MethodName: OnClick
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: GrandePlace
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 8525004921411765488}
@@ -11618,18 +11594,6 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2551238289436102723}
-          m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-          m_MethodName: LoadNewZone
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: GrandePlace
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1784849134709885542
@@ -12377,13 +12341,13 @@ MonoBehaviour:
         - m_Target: {fileID: 4710566766906241748}
           m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
           m_MethodName: OnClick
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Gare_AfterMap
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 8525004921411765488}
@@ -12396,18 +12360,6 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2551238289436102723}
-          m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-          m_MethodName: LoadNewZone
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Gare_AfterMap
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &2888471983410020511
@@ -13260,9 +13212,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2551238289436102723}
-          m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-          m_MethodName: LoadNewZone
+        - m_Target: {fileID: 4710566766906241748}
+          m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
+          m_MethodName: OnClick
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -13270,18 +13222,6 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: Gare_AfterMap
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 4710566766906241748}
-          m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
-          m_MethodName: OnClick
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 8525004921411765488}
@@ -16167,13 +16107,13 @@ MonoBehaviour:
         - m_Target: {fileID: 8852358276920361537}
           m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
           m_MethodName: OnClick
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: "H\xF4tel"
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 8525004921411765488}
@@ -16186,18 +16126,6 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2551238289436102723}
-          m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-          m_MethodName: LoadNewZone
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: "H\xF4tel"
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &5411156610263167685
@@ -19698,13 +19626,13 @@ MonoBehaviour:
         - m_Target: {fileID: 4769234235846974530}
           m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
           m_MethodName: OnClick
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Hangars
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 8525004921411765488}
@@ -19717,18 +19645,6 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2551238289436102723}
-          m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-          m_MethodName: LoadNewZone
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Hangars
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &7824716732756546007
@@ -20427,13 +20343,13 @@ MonoBehaviour:
         - m_Target: {fileID: 2344597767867044677}
           m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
           m_MethodName: OnClick
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: GrandePlace
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 8525004921411765488}
@@ -20446,18 +20362,6 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2551238289436102723}
-          m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-          m_MethodName: LoadNewZone
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: GrandePlace
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &8859331994776371038
