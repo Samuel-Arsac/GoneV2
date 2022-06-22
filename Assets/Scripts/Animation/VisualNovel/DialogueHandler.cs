@@ -163,12 +163,7 @@ public class DialogueHandler : ProjectManager<DialogueHandler>
         startDialogue(cantTravelDialogues[0], true);
     }
 
-    public void StartDialogueCantTravelRailway2()
-    {
-        startDialogue(cantTravelDialogues[2], true);
-    }
-
-    public void StartDialogueCantTravelHostel()
+    public void StartDialogueCantTravelAway()
     {
         startDialogue(cantTravelDialogues[1], true);
     }

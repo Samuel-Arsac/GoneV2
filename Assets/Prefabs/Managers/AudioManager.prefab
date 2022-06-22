@@ -72,7 +72,7 @@ MonoBehaviour:
   - audioType: 1
     name: "H\xF4tel"
     clip: {fileID: 8300000, guid: f58ee0aac8cab22489877a5910c59fc3, type: 3}
-    volume: 0.25
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - audioType: 0
     name: Station_02
-    clip: {fileID: 8300000, guid: a12f85cf8fb80914e947270ceccf5b4c, type: 3}
+    clip: {fileID: 8300000, guid: f8559e4d8338beb49bde66396371d098, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
@@ -198,6 +198,20 @@ MonoBehaviour:
   - audioType: 0
     name: Train Door
     clip: {fileID: 8300000, guid: abfd6c4fd97345741b3c36015c46b9f5, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 0
+    name: ClickTik
+    clip: {fileID: 8300000, guid: f7fab61c586a34c409829c5fb7e44da0, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 0
+    name: HoverTik
+    clip: {fileID: 8300000, guid: 4c922aeb6baba5c49be87e08b4335f90, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0

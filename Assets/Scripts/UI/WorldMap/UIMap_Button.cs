@@ -24,7 +24,8 @@ public class UIMap_Button : MonoBehaviour
 
     public void OnClick()
     {
-        UIWorldMap.Instance.currentZone = linkedZone;
         OutlineZoneHide();
+        UIWorldMap.Instance.currentZone = linkedZone;
+        
     }
 }

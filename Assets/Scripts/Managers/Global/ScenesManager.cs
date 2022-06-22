@@ -33,28 +33,7 @@ public class ScenesManager : LocalManager<ScenesManager>
     {
         if(UIWorldMap.Instance.canTravel)
         {
-            if(UIWorldMap.Instance.cantGoToRailway)
-            {
-                if(UIWorldMap.Instance.currentZone == UIWorldMap.zones.GrandePlace)
-                {
-                    DialogueHandler.Instance.StartDialogueCantTravelRailway2();
-                }
-                else
-                {
-                    DialogueHandler.Instance.StartDialogueCantTravelRailway();
-                }
-            }
-
-            else if(UIWorldMap.Instance.cantGoToHostel)
-            {
-                DialogueHandler.Instance.StartDialogueCantTravelHostel();
-            }
-
-            else
-            {
-                LevelChanger.Instance.FadeToLevel(sceneToLoad);
-            }
-            
+            LevelChanger.Instance.FadeToLevel(sceneToLoad);
 
         }
         else

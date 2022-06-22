@@ -29,16 +29,14 @@ public class MainMenu : MonoBehaviour
 
     public void DisplayOptionsSection()
     {
+        mainSection.SetActive(false);
         optionsSection.SetActive(true);
-        mainMenuCanvasGroup.interactable = false;
-        mainMenuCanvasGroup.blocksRaycasts = false;
     }
 
     public void HideOptionsSection()
     {
+        mainSection.SetActive(true);
         optionsSection.SetActive(false);
-        mainMenuCanvasGroup.interactable = true;
-        mainMenuCanvasGroup.blocksRaycasts = true;
     }
 
     public void QuitGame()
