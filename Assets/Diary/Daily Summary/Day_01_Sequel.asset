@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a5888c7d4d251419e7ccd555ece289, type: 3}
+  m_Name: Day_01_Sequel
+  m_EditorClassIdentifier: 
+  numberDay: "Journ\xE9e 01"
+  summary: "Lors de mon arriv\xE9e \xE0 Technograd, j'ai fait la rencontre de Gersande,
+    une personne tr\xE8s d\xE9sagr\xE9able qui s'est occup\xE9 de v\xE9rifier mes
+    papiers mais qui n'avait pas l'air de vouloir me voir d'avantage."
