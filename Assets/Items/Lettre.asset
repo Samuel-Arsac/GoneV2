@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Lettre
   itemSubtitle: Lettre d'Ethan
   readDescription: 0
-  itemDescription: "Ceci est une lettre \xE9crite par mon fr\xE8re Ethan."
+  itemDescription: "Une lettre envoy\xE9e par mon fr\xE8re Ethan. Elle contient un
+    message cach\xE9 disant \n\xAB Viens me trouver \xBB."
   canExamine: 1
   pastItem: {fileID: 4973185293528429709, guid: 8f9a7925320cc5245aa14963810dab7d, type: 3}
   descriptionPostExamen: 
-  isExamined: 0
+  isExamined: 1
   isProofs: 1

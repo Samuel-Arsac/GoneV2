@@ -3,10 +3,10 @@ using UnityEngine;
 using TMPro;
 
 
-public class UIDaily : MonoBehaviour
+public class UIDaily : LocalManager<UIDaily>
 {
 
-    [SerializeField] private List<DailySummary> dailySummaries;
+    public List<DailySummary> dailySummaries;
     [SerializeField] private TextMeshProUGUI dayNumberText;
     [SerializeField] private TextMeshProUGUI summaryText; 
 
@@ -16,7 +16,8 @@ public class UIDaily : MonoBehaviour
 
     private void OnEnable() 
     {
-
+        AudioManager.Instance.PlaySFX("Book");
+        numberDay = dailySummaries.Count -  1;
         UpdateDaySummaryText();
 
     }

@@ -155,7 +155,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - audioType: 0
     name: Paper Crumbling
-    clip: {fileID: 8300000, guid: 2346e5e95ff3d7d41aab367492c63d89, type: 3}
+    clip: {fileID: 8300000, guid: 5926ad51648559044a65b6d04d88a589, type: 3}
     volume: 0.15
     pitch: 1
     loop: 0
@@ -213,6 +213,41 @@ MonoBehaviour:
     name: HoverTik
     clip: {fileID: 8300000, guid: 4c922aeb6baba5c49be87e08b4335f90, type: 3}
     volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 0
+    name: HoverTik
+    clip: {fileID: 8300000, guid: 4c922aeb6baba5c49be87e08b4335f90, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 0
+    name: Writing
+    clip: {fileID: 8300000, guid: 16d54e8afa9d7474a9cd3a416465200e, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 0
+    name: Book
+    clip: {fileID: 8300000, guid: 0b7fac824e3e65d4c89c00c0961e2b71, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 0
+    name: Map
+    clip: {fileID: 8300000, guid: 8ba6a285776037f4aaa8136abbc7adf0, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 0
+    name: Bag
+    clip: {fileID: 8300000, guid: 7aca7abfda8edcd49b61ed5a7462a187, type: 3}
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}

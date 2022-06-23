@@ -29,6 +29,7 @@ public class UIManager : ProjectManager<UIManager>
     [SerializeField] private GameObject inventoryItem;
     [SerializeField] private GameObject worldMapItem;
     [SerializeField] private GameObject diaryItem;
+    [SerializeField] private GameObject dailyItem;
     private GameObject inspectionCursor;
     [HideInInspector] public bool isInspectingEnviro;
     [SerializeField] Transform originalInterlocutorPos;
@@ -85,7 +86,12 @@ public class UIManager : ProjectManager<UIManager>
         worldMapItem.SetActive(false);
 
         diaryItem.SetActive(true);
+
+        dailyItem.SetActive(true);
+        dailyItem.SetActive(false);
+
         diaryItem.SetActive(false);
+
     }
 
     public void SetPastInspection()
@@ -475,9 +481,6 @@ public class UIManager : ProjectManager<UIManager>
                 DisplayEnviroCursor();
                 EnableEnvironementExamen();
            }
-
-            
-          
       }
 
     DisableBlurEffect();
@@ -559,6 +562,7 @@ public class UIManager : ProjectManager<UIManager>
     public void DisplayIcons()
     {
         icons.SetActive(true);
+        EnableButtons();
     }
 
     public void HideIcons()
@@ -664,6 +668,7 @@ public class UIManager : ProjectManager<UIManager>
     {
         if(isInspectingEnviro)
         {
+            AudioManager.Instance.SwapMusic("Hangars");
             CallFade();
             examenEnviroBackButton.SetActive(false);
             pastInspection.SetActive(false);
@@ -684,6 +689,7 @@ public class UIManager : ProjectManager<UIManager>
         }
         else
         {
+            AudioManager.Instance.SwapMusic("Hangars Reverse");
             EnableInteractionEnvironnment();
             HideIcons();
             HideTransition();

@@ -7,6 +7,18 @@ public class LevelChanger : LocalManager<LevelChanger>
 {
     [SerializeField] private Animator fadeAnimator;
     private string sceneToLoad;
+    private CanvasGroup canvasGroup;
+
+
+    private void Start()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
+    public void FadeOutBegins()
+    {
+        EnableCanvasGroup();
+    }
+
     public void OnFadeOutComplete()
     {
         SceneManager.LoadScene(sceneToLoad);
@@ -21,7 +33,19 @@ public class LevelChanger : LocalManager<LevelChanger>
     public void OnFadeInComplete()
     {
         UIManager.Instance.DisplayIcons();
-        //UIManager.Instance.EnableInteractionEnvironnment();
+        DisableCanvasGroup();
+    }
+
+    public void DisableCanvasGroup()
+    {
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+    }
+
+    public void EnableCanvasGroup()
+    {
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
     }
 
     public void FadeToLevel(string sceneName)

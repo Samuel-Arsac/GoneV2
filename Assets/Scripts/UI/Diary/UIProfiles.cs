@@ -17,6 +17,11 @@ public class UIProfiles : MonoBehaviour
     [SerializeField] private GameObject leftArrow;
     private int currentCharacter;
 
+    private void OnEnable()
+    {
+        AudioManager.Instance.PlaySFX("Book");
+    }
+
     public void UpdateProfilesText()
     {
         if(currentCharacter >= 1)

@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44a5888c7d4d251419e7ccd555ece289, type: 3}
-  m_Name: Day_01
+  m_Name: Day_01.5
   m_EditorClassIdentifier: 
-  numberDay: "Journ\xE9e 01"
-  summary: "Je suis bien arriv\xE9e \xE0 Technograd. Mon tuteur n'est cependant pas
-    venu me r\xE9cup\xE9rer \xE0 la gare."
+  numberDay: 17/10/247
+  summary: "Je suis arriv\xE9 \xE0 Technograd, mais Fergus n\u2019est visible nulle
+    part. Ethan non plus, d\u2019ailleurs\u2026 J\u2019imagine que je vais devoir
+    me rendre jusqu\u2019aux hangars si je veux le rencontrer ? Franchement, c\u2019est
+    assez excessif, \xE7a ne lui ressemble pas."

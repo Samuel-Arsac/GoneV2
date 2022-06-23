@@ -6746,7 +6746,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dailySummaries:
   - {fileID: 11400000, guid: 8915840652f87934fb220b3e7682c079, type: 2}
+  - {fileID: 11400000, guid: 46a6d43488317c34e93793c58c484152, type: 2}
   - {fileID: 11400000, guid: 3813a8a8b91b32740ba3d3dcc1b2d95d, type: 2}
+  - {fileID: 11400000, guid: 5dbea6baa37dc354a9563de366fc4e33, type: 2}
   dayNumberText: {fileID: 1240076802}
   summaryText: {fileID: 1534644693}
   rightArrow: {fileID: 5738413034706016204}
@@ -19374,6 +19376,7 @@ MonoBehaviour:
   inventoryItem: {fileID: 1337830415794454668}
   worldMapItem: {fileID: 3854504157042297095}
   diaryItem: {fileID: 1337830415456190271}
+  dailyItem: {fileID: 1337830415193734364}
   isInspectingEnviro: 0
   originalInterlocutorPos: {fileID: 5902147609291205732}
   originalPetraNamePos: {fileID: 8572496432212252280}

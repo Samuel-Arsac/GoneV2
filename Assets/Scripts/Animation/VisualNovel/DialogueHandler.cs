@@ -168,9 +168,14 @@ public class DialogueHandler : ProjectManager<DialogueHandler>
         startDialogue(cantTravelDialogues[1], true);
     }
 
-    public void StartDialogueCantTravelWatch()
+    public void StartDialogueCantTravel()
     {
         startDialogue(cantTravelDialogues[2], true);
+    }
+
+    public void StartDialogueCantTravelWatch()
+    {
+        startDialogue(cantTravelDialogues[3], true);
     }
 
    public void SetImageDialoguePosition(Image imageToMove)

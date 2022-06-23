@@ -27,7 +27,6 @@ public class UIMap_Button : MonoBehaviour
         
         if (UIWorldMap.Instance.cantGoToRailway && linkedZone == UIWorldMap.zones.Gare)
         {
-            Debug.Log("Oui");
             DialogueHandler.Instance.StartDialogueCantTravelRailway();
             UIWorldMap.Instance.DisplayUIWordlMap();
             UIManager.Instance.DisableInteractionEnvironnment();
@@ -35,7 +34,6 @@ public class UIMap_Button : MonoBehaviour
 
         else if(UIWorldMap.Instance.cantGoToHostel && (linkedZone == UIWorldMap.zones.Hôtel || linkedZone == UIWorldMap.zones.Gare))
         {
-            Debug.Log("Oui2");
             DialogueHandler.Instance.StartDialogueCantTravelAway();
             UIWorldMap.Instance.DisplayUIWordlMap();
             UIManager.Instance.DisableInteractionEnvironnment();
@@ -43,7 +41,6 @@ public class UIMap_Button : MonoBehaviour
 
         else if(UIWorldMap.Instance.canTravel)
         {
-            Debug.Log("Oui3");
             UIWorldMap.Instance.currentZone = linkedZone;
             LevelChanger.Instance.FadeToLevel(sceneToLoad);
             UIManager.Instance.DisableInteractionEnvironnment();
@@ -51,10 +48,17 @@ public class UIMap_Button : MonoBehaviour
         }
         else
         {
-            Debug.Log("Oui4");
-            UIWorldMap.Instance.DisplayUIWordlMap();
-            DialogueHandler.Instance.StartDialogueCantTravelWatch();
+            if(UIInventory.Instance.gotWatch)
+            {
+                
+                DialogueHandler.Instance.StartDialogueCantTravelWatch();
+            }
+            else
+            {
+                DialogueHandler.Instance.StartDialogueCantTravel();
+            }
 
+            UIWorldMap.Instance.DisplayUIWordlMap();
             UIManager.Instance.DisableInteractionEnvironnment();
         }
 

@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UIEvidence : MonoBehaviour
 {
     [SerializeField] private List<Transform> slotsList;
     [SerializeField] private RectTransform slotsParents;
     [SerializeField] private VerticalLayoutGroup grid;
+    private EventTrigger trigger;
 
     private void Awake()
     {

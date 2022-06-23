@@ -97,6 +97,7 @@ public class UIInventory : LocalManager<UIInventory>
     #region Inventory
     public void DisplayInventory()
     {
+        AudioManager.Instance.PlaySFX("Bag");
         if (UIManager.Instance.currentMenuOpen != null && UIManager.Instance.currentMenuOpen.name != gameObject.name)
         {
             UIManager.Instance.CheckIfMenuIsOpen(gameObject);
@@ -161,6 +162,7 @@ public class UIInventory : LocalManager<UIInventory>
 
     public void DisplayDescriptionOnClick(BaseEventData ctx)
     {
+        AudioManager.Instance.PlaySFX("ClickTik");
         PointerEventData data = ctx as PointerEventData;
         Item clickedItem = data.pointerPress.GetComponent<Item>();
         if (readItem == null)

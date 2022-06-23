@@ -28,8 +28,7 @@ public class UIDiary : LocalManager<UIDiary>
     }
 
     public void DisplayDiarySection()
-    {
-        
+    {        
         parentSection.SetActive(true);
 
         diarySection.SetActive(true);
@@ -44,6 +43,7 @@ public class UIDiary : LocalManager<UIDiary>
     #region Parent Section
     public void DisplayParentSection()
     {
+        AudioManager.Instance.PlaySFX("Book");
         if (UIManager.Instance.currentMenuOpen != null && UIManager.Instance.currentMenuOpen.name != gameObject.name)
         {
             UIManager.Instance.CheckIfMenuIsOpen(gameObject);
@@ -133,5 +133,6 @@ public class UIDiary : LocalManager<UIDiary>
     }
 
     #endregion
+
 
 }

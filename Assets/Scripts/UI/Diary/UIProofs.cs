@@ -27,6 +27,7 @@ public class UIProofs : MonoBehaviour
 
     private void OnEnable() 
     {
+        AudioManager.Instance.PlaySFX("Book");
         List<Item> proofs = null;
 
         proofs = ItemsManager.Instance.GetExaminedObjects();

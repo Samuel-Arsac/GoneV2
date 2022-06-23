@@ -7,7 +7,7 @@ public class Highlight : MonoBehaviour
 
     public void OnHover(BaseEventData ctx)
     {
-        if(UIManager.Instance.isInspectingEnviro)
+        if (UIManager.Instance.isInspectingEnviro)
         {
             CursorsManager.instance.DisplayCursor();
             UIManager.Instance.HideEnviroCursor();
