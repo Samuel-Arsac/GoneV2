@@ -289,7 +289,7 @@ MonoBehaviour:
   m_FalloffIntensity: 0.443
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.18
-  m_LightVolumeOpacity: 0.386
+  m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
@@ -709,7 +709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &279440388
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1597,7 +1597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13043907, y: 0.35011613}
   m_AnchorMax: {x: 0.30962843, y: 0.4135186}
-  m_AnchoredPosition: {x: -133.7038, y: 186.44376}
+  m_AnchoredPosition: {x: -133.7038, y: 186.44377}
   m_SizeDelta: {x: 82.21561, y: 49.535355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025044424
@@ -1746,7 +1746,7 @@ MonoBehaviour:
   m_FalloffIntensity: 0.443
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.18
-  m_LightVolumeOpacity: 0.386
+  m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
