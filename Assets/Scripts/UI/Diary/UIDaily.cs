@@ -16,7 +16,12 @@ public class UIDaily : LocalManager<UIDaily>
 
     private void OnEnable() 
     {
-        AudioManager.Instance.PlaySFX("Book");
+        if(UIManager.Instance.GetIntialisation())
+        {
+            Debug.Log("Oui");
+            AudioManager.Instance.PlaySFX("Book");
+        }
+
         numberDay = dailySummaries.Count -  1;
         UpdateDaySummaryText();
 

@@ -386,8 +386,8 @@ MonoBehaviour:
     text: Tenez.
     noNames: 0
     unknownCharacter: 0
-    playSound: 0
-    soundToPlay: 
+    playSound: 1
+    soundToPlay: Paper Crumbling
     isPetraHere: 1
     isFirstInterlocutorHere: 1
     isPetraTalking: 1

@@ -180,7 +180,11 @@ public class UIWorldMap : LocalManager<UIWorldMap>
 
     public void DisplayUIWordlMap()
     {
-        AudioManager.Instance.PlaySFX("Map");
+        if(UIManager.Instance.GetIntialisation())
+        {
+            AudioManager.Instance.PlaySFX("Map");
+        }
+        
         if(UIManager.Instance.currentMenuOpen != null && UIManager.Instance.currentMenuOpen.name != gameObject.name)
         {
             UIManager.Instance.CheckIfMenuIsOpen(gameObject);

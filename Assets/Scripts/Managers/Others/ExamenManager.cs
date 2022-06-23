@@ -30,6 +30,7 @@ public class ExamenManager : LocalManager<ExamenManager>
 
     private void OnDisable() 
     {
+        AudioManager.Instance.SwapMusic("Hangars");
         itemPastSprite.SetActive(false);
     }
     

@@ -19,7 +19,10 @@ public class UIProfiles : MonoBehaviour
 
     private void OnEnable()
     {
-        AudioManager.Instance.PlaySFX("Book");
+        if (UIManager.Instance.GetIntialisation())
+        {
+            AudioManager.Instance.PlaySFX("Book");
+        }
     }
 
     public void UpdateProfilesText()

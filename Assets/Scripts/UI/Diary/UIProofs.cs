@@ -24,13 +24,20 @@ public class UIProofs : MonoBehaviour
         grid.CalculateLayoutInputVertical();
         grid.SetLayoutVertical();
 
-        
     }
 
     private void OnEnable() 
     {
-        AudioManager.Instance.PlaySFX("Book");
+        if (UIManager.Instance.GetIntialisation())
+        {
+            AudioManager.Instance.PlaySFX("Book");
+        }
+
         List<Item> proofs = null;
+
+        entryEnter = new List<EventTrigger.Entry>();
+        entryExit = new List<EventTrigger.Entry>();
+
 
         proofs = ItemsManager.Instance.GetExaminedObjects();
 
@@ -46,7 +53,7 @@ public class UIProofs : MonoBehaviour
             entryEnter[i].callback.AddListener((data) => {DisplayProofsName((PointerEventData)data);});
             trigger.triggers.Add(entryEnter[i]);
 
-            entryExit[i] = new EventTrigger.Entry();
+            entryExit.Add(new EventTrigger.Entry());
             entryExit[i].eventID = EventTriggerType.PointerExit;
             entryExit[i].callback.AddListener((data) => {HideProofsName((PointerEventData)data);});
             trigger.triggers.Add(entryExit[i]);

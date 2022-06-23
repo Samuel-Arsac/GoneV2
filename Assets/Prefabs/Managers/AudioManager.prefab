@@ -251,6 +251,13 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - audioType: 0
+    name: PetraFoot
+    clip: {fileID: 8300000, guid: e8752292ccfbc064ba84879a7e90a1c8, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   currentTrack:
     audioType: 0
     name: 

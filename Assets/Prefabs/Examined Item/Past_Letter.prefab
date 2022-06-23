@@ -438,8 +438,7 @@ MonoBehaviour:
   newChangement: 1
   newObjects: []
   destroyWhenChangement: []
-  objectsToInstantiate:
-  - {fileID: 8273882035778492607, guid: fef30edf386dd6a46a9c1f1a0085e947, type: 3}
+  objectsToInstantiate: []
   FirstCharacterSprites:
   - {fileID: 21300000, guid: b05258fc14164f74a8f974b1a78fdf9c, type: 3}
   anotherInterlocutor: 0
@@ -485,7 +484,8 @@ MonoBehaviour:
   - type: 0
     changementAfterDialogue: 0
     objectsAfterChangement: {fileID: 0}
-    text: "Mais ce message\u2026 \xAB Aide moi -Ethan \xBB."
+    text: "Mais ce message\u2026 \xAB 108 \xBB. Pourquoi un message aussi brefn s'il
+      avait l'opportunit\xE9 d'\xE9crire ce qu'il voulait ?"
     noNames: 0
     unknownCharacter: 0
     playSound: 0
@@ -503,8 +503,7 @@ MonoBehaviour:
   - type: 0
     changementAfterDialogue: 0
     objectsAfterChangement: {fileID: 0}
-    text: "Eh bien, \xE7a ne laisse plus place au doute. Il s\u2019est pass\xE9 quelque
-      chose avec ces voyous, et il a maintenant besoin d\u2019aide. "
+    text: Qu'est-ce que tu ne me dis pas Ethan...?
     noNames: 0
     unknownCharacter: 0
     playSound: 0
@@ -522,9 +521,8 @@ MonoBehaviour:
   - type: 2
     changementAfterDialogue: 0
     objectsAfterChangement: {fileID: 0}
-    text: "Mais pourquoi passer par un moyen aussi d\xE9tourn\xE9 ? Et comment s\u2019est-il
-      retrouv\xE9 dans ces histoires de gang ? Ethan, qu\u2019est-ce que tu ne me
-      dis pas.."
+    text: "Enfin bref, j\u2019imagine que ce \xAB 108 \xBB fait r\xE9f\xE9rence au
+      hangar 108 ? Peut-\xEAtre que je vais y trouver un message plus long..."
     noNames: 0
     unknownCharacter: 0
     playSound: 0

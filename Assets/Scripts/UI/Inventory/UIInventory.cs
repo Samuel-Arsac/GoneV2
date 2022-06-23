@@ -97,7 +97,11 @@ public class UIInventory : LocalManager<UIInventory>
     #region Inventory
     public void DisplayInventory()
     {
-        AudioManager.Instance.PlaySFX("Bag");
+        if (UIManager.Instance.GetIntialisation())
+        {
+            AudioManager.Instance.PlaySFX("Bag");
+        }
+
         if (UIManager.Instance.currentMenuOpen != null && UIManager.Instance.currentMenuOpen.name != gameObject.name)
         {
             UIManager.Instance.CheckIfMenuIsOpen(gameObject);
@@ -263,6 +267,7 @@ public class UIInventory : LocalManager<UIInventory>
         PointerEventData data = ctx as PointerEventData;
         itemExamined = readItem;
         DisplayTransition();
+        AudioManager.Instance.SwapMusic("Hangars Reverse");
         DisplayInventory();
     }
 

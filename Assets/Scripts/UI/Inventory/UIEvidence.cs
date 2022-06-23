@@ -30,25 +30,30 @@ public class UIEvidence : MonoBehaviour
         List<Item> items = null;
         items = ItemsManager.Instance.GetExaminedObjects();
 
-        for(int i = 0; i < items.Count; i++)
+        entryEnter = new List<EventTrigger.Entry>();
+        entryExit = new List<EventTrigger.Entry>();
+
+        for (int i = 0; i < items.Count; i++)
         {
             items[i].transform.position = slotsList[i].position;
             items[i].transform.localScale = slotsList[i].localScale;
-            items[i].gameObject.SetActive(true);
+            
             Draggable drag = items[i].gameObject.AddComponent<Draggable>();
             drag.itemCanvasGroup = items[i].GetComponent<CanvasGroup>();
 
-            /*trigger = items[i].gameObject.GetComponent<EventTrigger>();
+            trigger = items[i].gameObject.GetComponent<EventTrigger>();
 
-            entryEnter[i] = new EventTrigger.Entry();
+            entryEnter.Add(new EventTrigger.Entry());
             entryEnter[i].eventID = EventTriggerType.PointerEnter;
-            entryEnter[i].callback.AddListener((data) => { HideProofsName((PointerEventData)data); });
+            entryEnter[i].callback.AddListener((data) => { DisplayProofsName((PointerEventData)data); });
             trigger.triggers.Add(entryEnter[i]);
 
-            entryExit[i] = new EventTrigger.Entry();
-            entryEnter[i].eventID = EventTriggerType.PointerExit;
-            entryExit[i].callback.AddListener((data) => { DisplayProofsName((PointerEventData)data); });
-            trigger.triggers.Add(entryExit[i]);*/
+            entryExit.Add(new EventTrigger.Entry());
+            entryExit[i].eventID = EventTriggerType.PointerExit;
+            entryExit[i].callback.AddListener((data) => { HideProofsName((PointerEventData)data); });
+            trigger.triggers.Add(entryExit[i]);
+
+            items[i].gameObject.SetActive(true);
 
         }
     }
@@ -63,7 +68,7 @@ public class UIEvidence : MonoBehaviour
         {
             items[i].transform.position = Vector3.zero;
             items[i].gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
-            //trigger = items[i].GetComponent<EventTrigger>();
+            trigger = items[i].GetComponent<EventTrigger>();
             if (Application.isPlaying)
             {
                 Destroy(items[i].gameObject.GetComponent<Draggable>());
@@ -74,8 +79,8 @@ public class UIEvidence : MonoBehaviour
             }
             
 
-            /*trigger.triggers.Remove(entryEnter[i]);
-            trigger.triggers.Remove(entryExit[i]);*/
+            trigger.triggers.Remove(entryEnter[i]);
+            trigger.triggers.Remove(entryExit[i]);
 
 
             items[i].gameObject.SetActive(false);
@@ -89,7 +94,7 @@ public class UIEvidence : MonoBehaviour
     {
         proofsInformations.SetActive(true);
         proofsName.text = ctx.pointerEnter.GetComponent<Item>().itemData.itemName;
-        proofsInformations.transform.position = ctx.pointerEnter.transform.position - new Vector3(100, 0);
+        proofsInformations.transform.position = ctx.pointerEnter.transform.position - new Vector3(-150, 0);
     }
 
     public void HideProofsName(PointerEventData ctx)

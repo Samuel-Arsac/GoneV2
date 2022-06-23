@@ -43,7 +43,11 @@ public class UIDiary : LocalManager<UIDiary>
     #region Parent Section
     public void DisplayParentSection()
     {
-        AudioManager.Instance.PlaySFX("Book");
+        if (UIManager.Instance.GetIntialisation())
+        {
+            AudioManager.Instance.PlaySFX("Book");
+        }
+
         if (UIManager.Instance.currentMenuOpen != null && UIManager.Instance.currentMenuOpen.name != gameObject.name)
         {
             UIManager.Instance.CheckIfMenuIsOpen(gameObject);

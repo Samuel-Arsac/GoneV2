@@ -17,6 +17,7 @@ public class LevelChanger : LocalManager<LevelChanger>
     public void FadeOutBegins()
     {
         EnableCanvasGroup();
+        AudioManager.Instance.PlaySFX("PetraFoot");
     }
 
     public void OnFadeOutComplete()
@@ -26,6 +27,7 @@ public class LevelChanger : LocalManager<LevelChanger>
 
     public void OnFadeInBegins()
     {
+        AudioManager.Instance.PlaySFX("PetraFoot");
         UIManager.Instance.HideIcons();
         UIManager.Instance.DisableInteractionEnvironnment();
     }

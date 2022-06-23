@@ -51,6 +51,7 @@ public class UIManager : ProjectManager<UIManager>
     [Foldout("Fade Vignette")]
     bool fadeIn = true;
     public static bool firstInit = false;
+    private bool isInitialized = false;
 
     #region Start
 
@@ -91,7 +92,13 @@ public class UIManager : ProjectManager<UIManager>
         dailyItem.SetActive(false);
 
         diaryItem.SetActive(false);
+        isInitialized = true;
 
+    }
+
+    public bool GetIntialisation()
+    {
+        return isInitialized;
     }
 
     public void SetPastInspection()
