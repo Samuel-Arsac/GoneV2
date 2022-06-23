@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class UIEvidence : MonoBehaviour
 {
+    [SerializeField] private GameObject proofsInformations;
+    [SerializeField] private TextMeshProUGUI proofsName;
+
     [SerializeField] private List<Transform> slotsList;
     [SerializeField] private RectTransform slotsParents;
     [SerializeField] private VerticalLayoutGroup grid;
     private EventTrigger trigger;
+    private List<EventTrigger.Entry> entryEnter;
+    private List<EventTrigger.Entry> entryExit;
 
     private void Awake()
     {
@@ -31,6 +37,19 @@ public class UIEvidence : MonoBehaviour
             items[i].gameObject.SetActive(true);
             Draggable drag = items[i].gameObject.AddComponent<Draggable>();
             drag.itemCanvasGroup = items[i].GetComponent<CanvasGroup>();
+
+            /*trigger = items[i].gameObject.GetComponent<EventTrigger>();
+
+            entryEnter[i] = new EventTrigger.Entry();
+            entryEnter[i].eventID = EventTriggerType.PointerEnter;
+            entryEnter[i].callback.AddListener((data) => { HideProofsName((PointerEventData)data); });
+            trigger.triggers.Add(entryEnter[i]);
+
+            entryExit[i] = new EventTrigger.Entry();
+            entryEnter[i].eventID = EventTriggerType.PointerExit;
+            entryExit[i].callback.AddListener((data) => { DisplayProofsName((PointerEventData)data); });
+            trigger.triggers.Add(entryExit[i]);*/
+
         }
     }
 
@@ -44,7 +63,8 @@ public class UIEvidence : MonoBehaviour
         {
             items[i].transform.position = Vector3.zero;
             items[i].gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
-            if(Application.isPlaying)
+            //trigger = items[i].GetComponent<EventTrigger>();
+            if (Application.isPlaying)
             {
                 Destroy(items[i].gameObject.GetComponent<Draggable>());
             }
@@ -53,9 +73,29 @@ public class UIEvidence : MonoBehaviour
                 DestroyImmediate(items[i].gameObject.GetComponent<Draggable>());
             }
             
+
+            /*trigger.triggers.Remove(entryEnter[i]);
+            trigger.triggers.Remove(entryExit[i]);*/
+
+
             items[i].gameObject.SetActive(false);
             
         }
+    }
+
+
+
+    public void DisplayProofsName(PointerEventData ctx)
+    {
+        proofsInformations.SetActive(true);
+        proofsName.text = ctx.pointerEnter.GetComponent<Item>().itemData.itemName;
+        proofsInformations.transform.position = ctx.pointerEnter.transform.position - new Vector3(100, 0);
+    }
+
+    public void HideProofsName(PointerEventData ctx)
+    {
+        proofsName.text = null;
+        proofsInformations.SetActive(false);
     }
 
 }

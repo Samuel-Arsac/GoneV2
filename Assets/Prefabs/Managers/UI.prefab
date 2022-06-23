@@ -9700,7 +9700,7 @@ GameObject:
   - component: {fileID: 1337830416293640497}
   - component: {fileID: 1337830416293640496}
   m_Layer: 5
-  m_Name: Scrolling_Menu
+  m_Name: // Scrolling Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9742,6 +9742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d7eb6de41269145bd0cb5b9681830b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  proofsInformations: {fileID: 3553485119449845262}
+  proofsName: {fileID: 3553485119140843719}
   slotsList:
   - {fileID: 1290678445466369557}
   - {fileID: 8482314073868307823}

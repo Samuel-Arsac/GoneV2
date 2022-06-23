@@ -14,8 +14,8 @@ public class UIProofs : MonoBehaviour
     [SerializeField] private GridLayoutGroup grid;
 
     private EventTrigger trigger;
-    private EventTrigger.Entry entryEnter;
-    private EventTrigger.Entry entryExit;
+    private List<EventTrigger.Entry> entryEnter;
+    private List<EventTrigger.Entry> entryExit;
 
     private void Awake()
     {
@@ -23,6 +23,8 @@ public class UIProofs : MonoBehaviour
         grid.SetLayoutHorizontal();
         grid.CalculateLayoutInputVertical();
         grid.SetLayoutVertical();
+
+        
     }
 
     private void OnEnable() 
@@ -39,15 +41,15 @@ public class UIProofs : MonoBehaviour
 
             trigger = proofs[i].gameObject.GetComponent<EventTrigger>();
 
-            entryEnter = new EventTrigger.Entry();
-            entryEnter.eventID = EventTriggerType.PointerEnter;
-            entryEnter.callback.AddListener((data) => {DisplayProofsName((PointerEventData)data);});
-            trigger.triggers.Add(entryEnter);
+            entryEnter.Add(new EventTrigger.Entry());
+            entryEnter[i].eventID = EventTriggerType.PointerEnter;
+            entryEnter[i].callback.AddListener((data) => {DisplayProofsName((PointerEventData)data);});
+            trigger.triggers.Add(entryEnter[i]);
 
-            entryExit = new EventTrigger.Entry();
-            entryExit.eventID = EventTriggerType.PointerExit;
-            entryExit.callback.AddListener((data) => {HideProofsName((PointerEventData)data);});
-            trigger.triggers.Add(entryExit);
+            entryExit[i] = new EventTrigger.Entry();
+            entryExit[i].eventID = EventTriggerType.PointerExit;
+            entryExit[i].callback.AddListener((data) => {HideProofsName((PointerEventData)data);});
+            trigger.triggers.Add(entryExit[i]);
 
             proofs[i].gameObject.SetActive(true);
         }
@@ -64,8 +66,9 @@ public class UIProofs : MonoBehaviour
             proofs[i].gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
             trigger = proofs[i].gameObject.GetComponent<EventTrigger>();
 
-            trigger.triggers.Remove(entryEnter);
-            trigger.triggers.Remove(entryExit);
+            trigger.triggers.Remove(entryEnter[i]);
+            trigger.triggers.Remove(entryExit[i]);
+
 
             proofs[i].gameObject.SetActive(false);
         }
