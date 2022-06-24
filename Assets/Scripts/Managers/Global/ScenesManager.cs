@@ -44,6 +44,7 @@ public class ScenesManager : LocalManager<ScenesManager>
         UIManager.Instance.worldCanvasGameObject = GameObject.FindGameObjectWithTag("World Canvas");
         UIManager.Instance.presentInspeciton = GameObject.FindGameObjectWithTag("Present");
         UIManager.Instance.pastInspection = GameObject.FindGameObjectWithTag("Past");
+        UIManager.Instance.GetSpawnCursorPos();
 
         UIManager.Instance.SetCanvasInteractable();
     }

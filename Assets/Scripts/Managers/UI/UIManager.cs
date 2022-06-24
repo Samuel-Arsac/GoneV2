@@ -20,6 +20,10 @@ public class UIManager : ProjectManager<UIManager>
     [SerializeField] private GameObject inspectionCursorToSpawn;
     [Foldout("Environment Examen")]
     [SerializeField] private GameObject inspectionCursorFindToSpawn;
+    [Foldout("Environment Examen")]
+    [SerializeField] private GameObject inspectionZone;
+    [Foldout("Environment Examen")]
+    [SerializeField] private Transform inspectionCursorFindToSpawnTransform;
 
     [SerializeField] GameObject watchButton;
     [SerializeField] private Sprite petraNameSpriteOriginal;
@@ -123,6 +127,12 @@ public class UIManager : ProjectManager<UIManager>
         interactableCanvas = worldCanvasGameObject.GetComponent<CanvasGroup>();
     }
 
+    public void GetSpawnCursorPos()
+    {
+        inspectionZone = pastInspection.transform.GetChild(0).gameObject;
+
+        inspectionCursorFindToSpawnTransform = inspectionZone.transform.GetChild(2);
+    }
 
     #endregion
 
@@ -604,12 +614,14 @@ public class UIManager : ProjectManager<UIManager>
 
     public void DisableInteractionEnvironnment()
     {
+        Debug.Log("Non");
         interactableCanvas.interactable = false;
         interactableCanvas.blocksRaycasts = false;
     }
 
     public void EnableInteractionEnvironnment()
     {
+        Debug.Log("Oui");
         interactableCanvas.interactable = true;
         interactableCanvas.blocksRaycasts = true;
     }
@@ -708,7 +720,8 @@ public class UIManager : ProjectManager<UIManager>
 
             if(inspectionCursor == null)
             {
-                inspectionCursor = Instantiate(inspectionCursorToSpawn, canvas.transform);
+                inspectionCursor = Instantiate(inspectionCursorToSpawn, inspectionCursorFindToSpawnTransform);
+                inspectionCursor.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
             }
             else
             {
@@ -804,7 +817,7 @@ public class UIManager : ProjectManager<UIManager>
         else
         {
             
-            inspectionCursor.transform.position = InputsManager.Instance.ReadMousePostionValue();
+            inspectionCursor.transform.position = InputsManager.Instance.ReadMousePositionValueWorldSpace();
         }
 
     }

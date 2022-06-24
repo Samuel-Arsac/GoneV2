@@ -40,6 +40,14 @@ public class InputsManager :  LocalManager<InputsManager>
         return UIModule.point.action.ReadValue<Vector2>();
     }
 
+    public Vector2 ReadMousePositionValueWorldSpace()
+
+    {
+        Vector2 mousePos = UIModule.point.action.ReadValue<Vector2>();
+        Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+        return worldPos;
+    }
+
     public void EscapeClick(InputAction.CallbackContext context)
     {
         UIManager.Instance.DisplayQuitConfirm();

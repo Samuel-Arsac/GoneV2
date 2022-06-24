@@ -15,6 +15,7 @@ public class ExamenTransition : MonoBehaviour
     {
         if(enviro)
         {
+            Debug.Log("enviro");
             CursorsManager.instance.HideCursor();
             UIManager.Instance.CallFade();
             UIManager.Instance.EnableEnvironementExamen();
@@ -22,6 +23,7 @@ public class ExamenTransition : MonoBehaviour
         }
         else
         {
+            Debug.Log("pas enviro");
             UIInventory.Instance.HideTransition();
         }
     }
