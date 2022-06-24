@@ -11,6 +11,11 @@ TagManager:
   - Past
   - WatchButton
   - Inventory
+  - Door
+  - Passerelle
+  - Caisses
+  - Access
+  - Destroy
   layers:
   - Default
   - TransparentFX

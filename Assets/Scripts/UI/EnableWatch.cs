@@ -8,8 +8,6 @@ public class EnableWatch : MonoBehaviour
 
     private void Start()
     {
-        UIInventory.Instance.UnlockWatch();
-
         UIManager.Instance.DisplayWatchButton();
     }
 

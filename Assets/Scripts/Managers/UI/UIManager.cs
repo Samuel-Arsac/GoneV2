@@ -470,6 +470,11 @@ public class UIManager : ProjectManager<UIManager>
                 clickedCharacter.gameObject.SetActive(true);
             }
       }
+      else
+      {
+            EnableInteractionEnvironnment();
+            EnableButtons();
+       }
       if(characterInfo.gotLinkCharacter)
       {
             characterInfo.linkCharacter.SetActive(true);

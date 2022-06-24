@@ -264,7 +264,6 @@ public class UIInventory : LocalManager<UIInventory>
 
     public void DisplayExamenUI(BaseEventData ctx)
     {
-        Debug.Log("oui");
         PointerEventData data = ctx as PointerEventData;
         itemExamined = readItem;
         DisplayTransition();

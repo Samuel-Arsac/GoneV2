@@ -438,7 +438,8 @@ MonoBehaviour:
   newChangement: 1
   newObjects: []
   destroyWhenChangement: []
-  objectsToInstantiate: []
+  objectsToInstantiate:
+  - {fileID: 8273882035778492607, guid: fef30edf386dd6a46a9c1f1a0085e947, type: 3}
   FirstCharacterSprites:
   - {fileID: 21300000, guid: b05258fc14164f74a8f974b1a78fdf9c, type: 3}
   anotherInterlocutor: 0
@@ -518,7 +519,7 @@ MonoBehaviour:
     IsOtherInterlocutorHere: 0
     otherInterlocutorSpriteIdx: 0
     petraSpriteIdx: 15
-  - type: 2
+  - type: 3
     changementAfterDialogue: 0
     objectsAfterChangement: {fileID: 0}
     text: "Enfin bref, j\u2019imagine que ce \xAB 108 \xBB fait r\xE9f\xE9rence au
@@ -754,11 +755,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8831829318332807176, guid: f66b95a311b68d44dbccf8797c8ecf65, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -71.1
+      value: -65.20001
       objectReference: {fileID: 0}
     - target: {fileID: 8831829318332807176, guid: f66b95a311b68d44dbccf8797c8ecf65, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 186.10002
       objectReference: {fileID: 0}
     - target: {fileID: 8831829318332807176, guid: f66b95a311b68d44dbccf8797c8ecf65, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
