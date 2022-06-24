@@ -23,7 +23,10 @@ public class UIManager : ProjectManager<UIManager>
     [Foldout("Environment Examen")]
     [SerializeField] private GameObject inspectionZone;
     [Foldout("Environment Examen")]
-    [SerializeField] private Transform inspectionCursorFindToSpawnTransform;
+    [SerializeField] private Transform inspectionCusorToSpawnTransform;
+    private GameObject inspectionCursor;
+    private GameObject inspectionCursorFind;
+
 
     [SerializeField] GameObject watchButton;
     [SerializeField] private Sprite petraNameSpriteOriginal;
@@ -34,7 +37,7 @@ public class UIManager : ProjectManager<UIManager>
     [SerializeField] private GameObject worldMapItem;
     [SerializeField] private GameObject diaryItem;
     [SerializeField] private GameObject dailyItem;
-    private GameObject inspectionCursor;
+    
     [HideInInspector] public bool isInspectingEnviro;
     [SerializeField] Transform originalInterlocutorPos;
     [SerializeField] Transform originalPetraNamePos;
@@ -127,11 +130,14 @@ public class UIManager : ProjectManager<UIManager>
         interactableCanvas = worldCanvasGameObject.GetComponent<CanvasGroup>();
     }
 
-    public void GetSpawnCursorPos()
+    public void SetInspectionZone()
     {
         inspectionZone = pastInspection.transform.GetChild(0).gameObject;
+    }
 
-        inspectionCursorFindToSpawnTransform = inspectionZone.transform.GetChild(2);
+    public void GetSpawnCursorPosition()
+    {
+        inspectionCusorToSpawnTransform = inspectionZone.transform.GetChild(2);
     }
 
     #endregion
@@ -454,13 +460,15 @@ public class UIManager : ProjectManager<UIManager>
     {
       if(!isAlone)
       {
-         CameraManager.instance.virtualCameraZoom.m_Priority -= 10;
-         CameraManager.instance.virtualCameraZoom.m_Follow = null;
-         StartCoroutine(ResetCameraPosition());
-         if(!DialogueHandler.Instance.characterInfo.autoLaunch && !DialogueHandler.Instance.characterInfo.isAlone)
-         {
-             clickedCharacter.gameObject.SetActive(true);
-         }
+            CameraManager.instance.virtualCameraZoom.m_Priority -= 10;
+            CameraManager.instance.virtualCameraZoom.m_Follow = null;
+            DisableButtons();
+            StartCoroutine(ResetCameraPosition());
+
+            if(!DialogueHandler.Instance.characterInfo.autoLaunch && !DialogueHandler.Instance.characterInfo.isAlone)
+            {
+                clickedCharacter.gameObject.SetActive(true);
+            }
       }
       if(characterInfo.gotLinkCharacter)
       {
@@ -500,9 +508,9 @@ public class UIManager : ProjectManager<UIManager>
            }
       }
 
-    DisableBlurEffect();
-    DisplayIcons();
-
+        DisableBlurEffect();
+        DisplayIcons();
+        
         dialogueCanvas.SetActive(false);
     }
     
@@ -579,7 +587,6 @@ public class UIManager : ProjectManager<UIManager>
     public void DisplayIcons()
     {
         icons.SetActive(true);
-        EnableButtons();
     }
 
     public void HideIcons()
@@ -614,14 +621,12 @@ public class UIManager : ProjectManager<UIManager>
 
     public void DisableInteractionEnvironnment()
     {
-        Debug.Log("Non");
         interactableCanvas.interactable = false;
         interactableCanvas.blocksRaycasts = false;
     }
 
     public void EnableInteractionEnvironnment()
     {
-        Debug.Log("Oui");
         interactableCanvas.interactable = true;
         interactableCanvas.blocksRaycasts = true;
     }
@@ -685,13 +690,14 @@ public class UIManager : ProjectManager<UIManager>
     #region Examen Environement
     public void EnableEnvironementExamen()
     {
+        GetSpawnCursorPosition();
         if(isInspectingEnviro)
         {
-            AudioManager.Instance.SwapMusic("Hangars");
             CallFade();
+            AudioManager.Instance.SwapMusic("Hangars");
             examenEnviroBackButton.SetActive(false);
             pastInspection.SetActive(false);
-            presentInspeciton.SetActive(true);
+            
             isInspectingEnviro = false;
             CursorsManager.instance.DisplayCursor();
                      
@@ -703,25 +709,31 @@ public class UIManager : ProjectManager<UIManager>
             else
             {
                 inspectionCursor.SetActive(false);
+                inspectionCursorFind.SetActive(false);
             }
             DisplayIcons();
+
+            presentInspeciton.SetActive(true);
         }
         else
         {
+            CallFade();
             AudioManager.Instance.SwapMusic("Hangars Reverse");
+            CursorsManager.instance.HideCursor();
             EnableInteractionEnvironnment();
             HideIcons();
-            HideTransition();
+            isInspectingEnviro = true;
             pastInspection.SetActive(true);
             presentInspeciton.SetActive(false);
-            CursorsManager.instance.HideCursor();
-            isInspectingEnviro = true;
             examenEnviroBackButton.SetActive(true);
 
             if(inspectionCursor == null)
             {
-                inspectionCursor = Instantiate(inspectionCursorToSpawn, inspectionCursorFindToSpawnTransform);
+                inspectionCursor = Instantiate(inspectionCursorToSpawn, inspectionCusorToSpawnTransform);
+                inspectionCursorFind = Instantiate(inspectionCursorFindToSpawn, inspectionCusorToSpawnTransform);
                 inspectionCursor.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                inspectionCursorFind.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                inspectionCursorFind.SetActive(false);
             }
             else
             {
@@ -816,10 +828,19 @@ public class UIManager : ProjectManager<UIManager>
         }
         else
         {
-            
             inspectionCursor.transform.position = InputsManager.Instance.ReadMousePositionValueWorldSpace();
+            inspectionCursorFind.transform.position = InputsManager.Instance.ReadMousePositionValueWorldSpace();
         }
+    }
 
+    public RectTransform GetInspectorCursorPosition()
+    {
+        return inspectionCursor.transform as RectTransform;
+    }
+
+    public GameObject GetInspectionCursorFind()
+    {
+        return inspectionCursorFind;
     }
 
     public void DisplayQuitConfirm()

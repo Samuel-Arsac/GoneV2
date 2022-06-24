@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: Hangars
-  comeFromMenu: 0
+  comeFromMenu: 1
 --- !u!4 &442307030
 Transform:
   m_ObjectHideFlags: 0
@@ -4260,6 +4260,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe224391f0bb9d499eb32efe310a798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pastKatie: {fileID: 540223581}
+  pastKeoni: {fileID: 1666929086}
+  dialoguePast: {fileID: 540223585}
+  cursorFind: {fileID: 7861712476827664174, guid: f66b95a311b68d44dbccf8797c8ecf65, type: 3}
 --- !u!114 &1577912295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6372,6 +6376,10 @@ PrefabInstance:
       propertyPath: spawnPositions.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3951734943985239055, guid: 4b285005363da454698e12d8506b275b, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4473622057241238123, guid: 4b285005363da454698e12d8506b275b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6737,6 +6745,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 859f72808644fd149a15238897c320df, type: 3}
     - target: {fileID: 7687270369093979306, guid: 4b285005363da454698e12d8506b275b, type: 3}
+      propertyPath: inspectionCusorToSpawnTransform
+      value: 
+      objectReference: {fileID: 1532282838475542872}
+    - target: {fileID: 7687270369093979306, guid: 4b285005363da454698e12d8506b275b, type: 3}
       propertyPath: inspectionCursorFindToSpawnTransform
       value: 
       objectReference: {fileID: 1532282838475542872}
@@ -6876,7 +6888,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -132.93417, y: -107.905876}
+  m_AnchoredPosition: {x: -121.5, y: -64}
   m_SizeDelta: {x: 66.2379, y: 66.2379}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1532282838475542873

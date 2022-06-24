@@ -39,6 +39,11 @@ public class DialogueHandler : ProjectManager<DialogueHandler>
             UIManager.Instance.CheckIfMenuIsOpen(UIManager.Instance.currentMenuOpen);
         }
 
+        if(UIManager.Instance.isInspectingEnviro)
+        {
+            UIManager.Instance.EnableEnvironementExamen();
+        }
+
         this.characterInfo = characterInfo;
         CursorsManager.instance.ChangeCursorTexture(0);
         currentDialogueIdx = 0;

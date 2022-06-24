@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem.UI;
 
 public class ExaminationMovement : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {

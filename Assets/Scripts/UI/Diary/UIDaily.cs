@@ -18,7 +18,6 @@ public class UIDaily : LocalManager<UIDaily>
     {
         if(UIManager.Instance.GetIntialisation())
         {
-            Debug.Log("Oui");
             AudioManager.Instance.PlaySFX("Book");
         }
 

@@ -5,25 +5,27 @@ using UnityEngine;
 public class ExamenTransition : MonoBehaviour
 {
     [SerializeField] private bool enviro;
-    private void Start()
+    private void OnEnable()
     {
         UIManager.Instance.DisableInteractionEnvironnment();
         UIManager.Instance.HideIcons();
+    }
+
+    private void OnDisable()
+    {
+        UIManager.Instance.EnableInteractionEnvironnment();        
     }
 
     public void StartExamen()
     {
         if(enviro)
         {
-            Debug.Log("enviro");
-            CursorsManager.instance.HideCursor();
-            UIManager.Instance.CallFade();
             UIManager.Instance.EnableEnvironementExamen();
+            UIManager.Instance.HideTransition();
             
         }
         else
         {
-            Debug.Log("pas enviro");
             UIInventory.Instance.HideTransition();
         }
     }

@@ -19371,6 +19371,8 @@ MonoBehaviour:
   pastInspection: {fileID: 0}
   inspectionCursorToSpawn: {fileID: 1532282839607912375, guid: b432dd34f28fd244297ef6a9606b239b, type: 3}
   inspectionCursorFindToSpawn: {fileID: 7861712476827664174, guid: f66b95a311b68d44dbccf8797c8ecf65, type: 3}
+  inspectionZone: {fileID: 0}
+  inspectionCusorToSpawnTransform: {fileID: 0}
   watchButton: {fileID: 812131940}
   petraNameSpriteOriginal: {fileID: 21300000, guid: 859f72808644fd149a15238897c320df, type: 3}
   transitionEnviroSection: {fileID: 85113091675556735}
@@ -20784,7 +20786,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 7687270369093979306}
           m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-          m_MethodName: EnableEnvironementExamen
+          m_MethodName: DisplayTransition
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
