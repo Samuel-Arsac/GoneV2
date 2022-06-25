@@ -128,7 +128,7 @@ public class DialogueHandler : ProjectManager<DialogueHandler>
        UIManager.Instance.DisplaySprites();
        UIManager.Instance.DisplayNames();
    }
-   
+
    public void GoodProofPresentation()
    {
         CursorsManager.instance.DisplayDefaultCursor();

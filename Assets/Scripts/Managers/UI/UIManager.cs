@@ -26,9 +26,12 @@ public class UIManager : ProjectManager<UIManager>
     [SerializeField] private Transform inspectionCusorToSpawnTransform;
     private GameObject inspectionCursor;
     private GameObject inspectionCursorFind;
+    private bool canUseWatch = true;
 
 
     [SerializeField] GameObject watchButton;
+    [SerializeField] GameObject watchButtonExamine;
+    [SerializeField] GameObject watchButtonCantExamine;
     [SerializeField] private Sprite petraNameSpriteOriginal;
     [SerializeField] private GameObject transitionEnviroSection;
     [SerializeField] private GameObject examenEnviroBackButton;
@@ -505,12 +508,6 @@ public class UIManager : ProjectManager<UIManager>
                     Instantiate(g, transform.position, transform.rotation);
                 }
            }
-
-           if(isInspectingEnviro)
-           {
-                DisplayEnviroCursor();
-                EnableEnvironementExamen();
-           }
       }
 
         DisableBlurEffect();
@@ -522,7 +519,13 @@ public class UIManager : ProjectManager<UIManager>
     IEnumerator ResetCameraPosition()
     {
         yield return new WaitForSeconds(CameraManager.instance.cinemachineBrain.m_DefaultBlend.m_Time);
-      
+
+        if (isInspectingEnviro)
+        {
+            DisplayEnviroCursor();
+            EnableEnvironementExamen();
+        }
+
         EnableInteractionEnvironnment();
         EnableButtons();
 
@@ -695,56 +698,72 @@ public class UIManager : ProjectManager<UIManager>
     #region Examen Environement
     public void EnableEnvironementExamen()
     {
-        GetSpawnCursorPosition();
-        if(isInspectingEnviro)
+        if(canUseWatch)
         {
-            CallFade();
-            AudioManager.Instance.SwapMusic("Hangars");
-            examenEnviroBackButton.SetActive(false);
-            pastInspection.SetActive(false);
-            
-            isInspectingEnviro = false;
-            CursorsManager.instance.DisplayCursor();
-                     
-
-            if(inspectionCursor == null)
+            GetSpawnCursorPosition();
+            if (isInspectingEnviro)
             {
-                return;
+                CallFade();
+                AudioManager.Instance.SwapMusic("Hangars");
+                examenEnviroBackButton.SetActive(false);
+                pastInspection.SetActive(false);
+
+                isInspectingEnviro = false;
+                CursorsManager.instance.DisplayCursor();
+
+
+                if (inspectionCursor == null)
+                {
+                    return;
+                }
+                else
+                {
+                    inspectionCursor.SetActive(false);
+                    inspectionCursorFind.SetActive(false);
+                }
+                DisplayIcons();
+
+                presentInspeciton.SetActive(true);
             }
             else
             {
-                inspectionCursor.SetActive(false);
-                inspectionCursorFind.SetActive(false);
-            }
-            DisplayIcons();
+                CallFade();
+                AudioManager.Instance.SwapMusic("Hangars Reverse");
+                CursorsManager.instance.HideCursor();
+                EnableInteractionEnvironnment();
+                HideIcons();
+                isInspectingEnviro = true;
+                pastInspection.SetActive(true);
+                presentInspeciton.SetActive(false);
+                examenEnviroBackButton.SetActive(true);
 
-            presentInspeciton.SetActive(true);
+                if (inspectionCursor == null)
+                {
+                    inspectionCursor = Instantiate(inspectionCursorToSpawn, inspectionCusorToSpawnTransform);
+                    inspectionCursorFind = Instantiate(inspectionCursorFindToSpawn, inspectionCusorToSpawnTransform);
+                    inspectionCursor.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                    inspectionCursorFind.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                    inspectionCursorFind.SetActive(false);
+                }
+                else
+                {
+                    inspectionCursor.SetActive(true);
+                }
+            }
         }
         else
         {
-            CallFade();
-            AudioManager.Instance.SwapMusic("Hangars Reverse");
-            CursorsManager.instance.HideCursor();
-            EnableInteractionEnvironnment();
-            HideIcons();
-            isInspectingEnviro = true;
-            pastInspection.SetActive(true);
-            presentInspeciton.SetActive(false);
-            examenEnviroBackButton.SetActive(true);
-
-            if(inspectionCursor == null)
-            {
-                inspectionCursor = Instantiate(inspectionCursorToSpawn, inspectionCusorToSpawnTransform);
-                inspectionCursorFind = Instantiate(inspectionCursorFindToSpawn, inspectionCusorToSpawnTransform);
-                inspectionCursor.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
-                inspectionCursorFind.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
-                inspectionCursorFind.SetActive(false);
-            }
-            else
-            {
-                inspectionCursor.SetActive(true);
-            }
+            DialogueHandler.Instance.CantExamineDialogue();
         }
+        
+
+    }
+
+    public void CantUseWatch()
+    {
+        canUseWatch = false;
+        watchButtonCantExamine.SetActive(true);
+        watchButtonExamine.SetActive(false);
 
     }
 

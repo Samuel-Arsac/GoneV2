@@ -4444,7 +4444,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: ClickTik
+            m_StringArgument: HoverTik
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1486684863}
@@ -4488,7 +4488,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: HoverTik
+            m_StringArgument: ClickTik
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 284350189}
@@ -5043,7 +5043,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: ClickTik
+            m_StringArgument: HoverTik
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1660786474}
@@ -5087,7 +5087,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: HoverTik
+            m_StringArgument: ClickTik
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 284350189}
