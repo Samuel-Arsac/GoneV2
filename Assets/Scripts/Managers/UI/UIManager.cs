@@ -629,6 +629,7 @@ public class UIManager : ProjectManager<UIManager>
 
     public void DisableInteractionEnvironnment()
     {
+        Debug.Log("Oui");
         interactableCanvas.interactable = false;
         interactableCanvas.blocksRaycasts = false;
     }

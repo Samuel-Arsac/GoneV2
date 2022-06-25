@@ -3,9 +3,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class UIProfiles : MonoBehaviour
+public class UIProfiles : LocalManager<UIProfiles>
 {
     [SerializeField] private List<Profiles> charactersProfiles;
+    [SerializeField] private List<GameObject> profilesPreviewImage;
     [SerializeField] private TextMeshProUGUI characterNameText;
     [SerializeField] private TextMeshProUGUI characterInformations;
     [SerializeField] private Image currentCharacterImage;
@@ -22,6 +23,20 @@ public class UIProfiles : MonoBehaviour
         if (UIManager.Instance.GetIntialisation())
         {
             AudioManager.Instance.PlaySFX("Book");
+        }
+        UpdateGlobalSection();
+    }
+
+    public List<Profiles> GetCharactersProfiles()
+    {
+        return charactersProfiles;
+    }
+
+    public void UpdateGlobalSection()
+    {
+        for(int i = 0; i < charactersProfiles.Count; i++)
+        {
+            profilesPreviewImage[i].SetActive(true);
         }
     }
 
@@ -80,6 +95,7 @@ public class UIProfiles : MonoBehaviour
 
     public void DisplayGloabalSection()
     {
+        UpdateGlobalSection();
         globalSection.SetActive(true);
         charactersSection.SetActive(false);
     }

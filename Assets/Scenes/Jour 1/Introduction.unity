@@ -271,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &88756711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1527,7 +1527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &881725854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,7 +1749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1107580519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1876,6 +1876,9 @@ MonoBehaviour:
       du Tube imminente. Reprise des moteurs \xE0 vapeur. "
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 1
@@ -1885,6 +1888,9 @@ MonoBehaviour:
       de Technograd."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 2
@@ -1894,6 +1900,9 @@ MonoBehaviour:
       du train. "
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 3
@@ -1903,6 +1912,9 @@ MonoBehaviour:
       veillent sur vous !"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 4
@@ -1911,6 +1923,15 @@ MonoBehaviour:
     text: 
     playSound: 0
     stringToPlay: 
+    changement: 1
+    newObjets:
+    - {fileID: 1437870762}
+    - {fileID: 881725853}
+    - {fileID: 88756710}
+    - {fileID: 1107580518}
+    - {fileID: 1930408084}
+    - {fileID: 1347918744}
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 5
@@ -1920,6 +1941,9 @@ MonoBehaviour:
       le temps que j\u2019arrive, Ethan\u2026 Cette lettre que tu m\u2019as envoy\xE9e\u2026 "
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 0
     nextDialogueIdx: 6
@@ -1928,6 +1952,9 @@ MonoBehaviour:
     text: ' '
     playSound: 1
     stringToPlay: Paper Crumbling
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 1
     nextDialogueIdx: 7
@@ -1937,6 +1964,9 @@ MonoBehaviour:
       pas parl\xE9, non\u202F? \xC7a doit faire quoi, bient\xF4t cinq ans\u202F?"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 1
     nextDialogueIdx: 8
@@ -1946,6 +1976,9 @@ MonoBehaviour:
       fait.\r\nTechnograd est vraiment une ville tentaculaire\u202F!"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 1
     nextDialogueIdx: 9
@@ -1955,6 +1988,9 @@ MonoBehaviour:
       \xE0 vapeur \xE0 travers toute la ville."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 1
     nextDialogueIdx: 10
@@ -1963,6 +1999,9 @@ MonoBehaviour:
     text: "C\u2019en est parfois m\xEAme assourdissant\u2026"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 1
     nextDialogueIdx: 11
@@ -1972,6 +2011,9 @@ MonoBehaviour:
       pas s\xFBr que tu appr\xE9cierais la ville sur le long terme."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 1
     nextDialogueIdx: 12
@@ -1981,6 +2023,9 @@ MonoBehaviour:
       s\u2019y balader\u202F!"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 1
     nextDialogueIdx: 13
@@ -1990,6 +2035,9 @@ MonoBehaviour:
       l\u2019autre de l\u2019\xEEle.\r\nIl doit bien y en avoir au moins 107\u202F!"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 1
     nextDialogueIdx: 14
@@ -1999,6 +2047,9 @@ MonoBehaviour:
       h\xE2te d\u2019avoir de tes nouvelles."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 1
     nextDialogueIdx: 15
@@ -2008,6 +2059,9 @@ MonoBehaviour:
       tes secrets pour quand on se reverra\u202F!"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 1
     nextDialogueIdx: 16
@@ -2016,6 +2070,9 @@ MonoBehaviour:
     text: "Amicalement,\r\nTon fr\xE8re, Ethan \xBB"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 1
     nextDialogueIdx: 17
@@ -2026,6 +2083,9 @@ MonoBehaviour:
       mois ?"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 1
     nextDialogueIdx: 18
@@ -2035,6 +2095,9 @@ MonoBehaviour:
       tout \xE0 fait banale, mais ce message \xE0 la fin..."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 1
     nextDialogueIdx: 19
@@ -2044,6 +2107,9 @@ MonoBehaviour:
       on parlait encore pour se passer des messages cod\xE9s."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 1
     nextDialogueIdx: 20
@@ -2052,6 +2118,9 @@ MonoBehaviour:
     text: "Et sans parler des taches d\u2019encre sous certaines lettres pr\xE9cises."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 1
     nextDialogueIdx: 21
@@ -2062,6 +2131,9 @@ MonoBehaviour:
       ; n- O-uvelles \xBB"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 1
     nextDialogueIdx: 22
@@ -2071,6 +2143,9 @@ MonoBehaviour:
       107 \xE9tant autant mis en avant, \xE7a ne peut vouloir dire qu\u2019une chose."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 1
     nextDialogueIdx: 23
@@ -2080,6 +2155,9 @@ MonoBehaviour:
       un dirigeant du pass\xE9 lointain."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 1
     nextDialogueIdx: 24
@@ -2089,6 +2167,9 @@ MonoBehaviour:
       3 pour plus de simplicit\xE9..."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 1
     nextDialogueIdx: 25
@@ -2097,6 +2178,9 @@ MonoBehaviour:
     text: "\xAB Sfbkpjbqorlsbo \xBB devient \xAB Viens me trouver \xBB"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 1
     nextDialogueIdx: 26
@@ -2106,6 +2190,9 @@ MonoBehaviour:
       devais vraiment \xEAtre en panique\u2026"
     playSound: 1
     stringToPlay: Paper Crumbling
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 0
     nextDialogueIdx: 27
@@ -2115,6 +2202,9 @@ MonoBehaviour:
       qu\u2019il ne t\u2019ait rien arriv\xE9 de grave..."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 0
     nextDialogueIdx: 28
@@ -2124,6 +2214,9 @@ MonoBehaviour:
       mes \xE9tudes l\xE0-dessus."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 0
     nextDialogueIdx: 29
@@ -2133,6 +2226,9 @@ MonoBehaviour:
       l\u2019acad\xE9mie accepte de me laisser partir \xE0 Technograd\u2026"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 0
     nextDialogueIdx: 40
@@ -2142,6 +2238,9 @@ MonoBehaviour:
       visite, je vais te tuer !"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 0
     nextDialogueIdx: 31
@@ -2150,6 +2249,9 @@ MonoBehaviour:
     text: ' '
     playSound: 1
     stringToPlay: Alarm
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 32
@@ -2159,6 +2261,9 @@ MonoBehaviour:
       de Technograd. Je r\xE9p\xE8te, gare de Technograd."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 33
@@ -2168,6 +2273,9 @@ MonoBehaviour:
       la plus proche pour faciliter l\u2019\xE9vacuation des voyageurs."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 34
@@ -2177,6 +2285,9 @@ MonoBehaviour:
       pas que les Hauts-dirigeants veillent sur vous !"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 35
@@ -2186,6 +2297,9 @@ MonoBehaviour:
       que je vais pouvoir le retrouver au hangar n\xB0 107 ?"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 0
     nextDialogueIdx: 36
@@ -2195,23 +2309,37 @@ MonoBehaviour:
       que je r\xE9ussirais \xE0 me faire assez de temps pour aller le retrouver."
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 0
     nextDialogueIdx: 37
   - type: 2
-    changeIllustration: 1
+    changeIllustration: 0
     text: ' '
     playSound: 1
     stringToPlay: Train Arrival
+    changement: 1
+    newObjets: []
+    oldObjets:
+    - {fileID: 881725853}
+    - {fileID: 88756710}
+    - {fileID: 1107580518}
+    - {fileID: 1930408084}
+    - {fileID: 1347918744}
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 38
-  - type: 1
-    changeIllustration: 0
+  - type: 2
+    changeIllustration: 1
     text: "Enfin bref, il est temps pour moi d\u2019aller d\xE9couvrir Technograd,
       la cit\xE9 technologique !"
     playSound: 1
     stringToPlay: Train Door
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 0
     nextDialogueIdx: 39
@@ -2220,6 +2348,9 @@ MonoBehaviour:
     text: 
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 40
@@ -2229,6 +2360,9 @@ MonoBehaviour:
       !"
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 1
     showingObject: 0
     nextDialogueIdx: 30
@@ -2269,6 +2403,9 @@ MonoBehaviour:
     text: 
     playSound: 0
     stringToPlay: 
+    changement: 0
+    newObjets: []
+    oldObjets: []
     isPetraTalking: 0
     showingObject: 0
     nextDialogueIdx: 0
@@ -2414,7 +2551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1347918745
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -7344,7 +7481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1437870763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7417,7 +7554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1930408085
 MonoBehaviour:
   m_ObjectHideFlags: 0

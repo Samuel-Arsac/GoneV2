@@ -8,7 +8,8 @@ public class UIDaily : LocalManager<UIDaily>
 
     public List<DailySummary> dailySummaries;
     [SerializeField] private TextMeshProUGUI dayNumberText;
-    [SerializeField] private TextMeshProUGUI summaryText; 
+    [SerializeField] private TextMeshProUGUI summaryText;
+    [SerializeField] private TextMeshProUGUI numberPageText;
 
     [SerializeField] private GameObject rightArrow;
     [SerializeField] private GameObject leftArrow;
@@ -49,6 +50,16 @@ public class UIDaily : LocalManager<UIDaily>
 
         dayNumberText.text = dailySummaries[numberDay].numberDay.ToString();
         summaryText.text = dailySummaries[numberDay].summary;
+        if(dailySummaries.Count >= 10)
+        {
+            numberPageText.text = "Page " + (numberDay + 1);
+        }
+        else
+        {
+            numberPageText.text = "Page 0" + (numberDay + 1);
+        }
+        
+        //numberPageText.text = "0" + (numberDay+1) + " - 0" + dailySummaries.Count;
     }
 
     public void NextPage()

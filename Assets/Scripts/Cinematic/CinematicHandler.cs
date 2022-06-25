@@ -82,6 +82,26 @@ public class CinematicHandler : LocalManager<CinematicHandler>
        {
            UIIntro.Instance.ChangeIllustration();
        }
+
+        if (cinematicDialogues.dialogueList[currentDialogueIdx].changement)
+        {
+            if(cinematicDialogues.dialogueList[currentDialogueIdx].newObjets != null)
+            {
+                foreach (GameObject g in cinematicDialogues.dialogueList[currentDialogueIdx].newObjets)
+                {
+                    g.SetActive(true);
+                }
+            }
+
+            if (cinematicDialogues.dialogueList[currentDialogueIdx].oldObjets != null)
+            {
+                foreach (GameObject g in cinematicDialogues.dialogueList[currentDialogueIdx].oldObjets)
+                {
+                    g.SetActive(false);
+                }
+            }
+            
+        }
        
        UIIntro.Instance.DisplayCinematicDialogue(cinematicDialogues.dialogueList[currentDialogueIdx]);
        DisplayNames(cinematicDialogues.dialogueList[currentDialogueIdx].isPetraTalking);

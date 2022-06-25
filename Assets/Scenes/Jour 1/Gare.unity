@@ -1143,7 +1143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &277440275
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6355,6 +6355,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 465855778103335838, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
+      propertyPath: newCharacters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 465855778103335838, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
       propertyPath: newEntries.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 78d65b0701a7eea459d42e6927491a6a, type: 2}
@@ -6362,6 +6366,14 @@ PrefabInstance:
       propertyPath: newEntries.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: c014c732183163d4f8d2b54f73bf0f32, type: 2}
+    - target: {fileID: 465855778103335838, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
+      propertyPath: newCharacters.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 72174685a2dc868408c83908287f4fbb, type: 2}
+    - target: {fileID: 465855778103335838, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
+      propertyPath: newCharacters.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: bde9e366aa3c1334d9d619f1a4173d41, type: 2}
     - target: {fileID: 5171860358756000808, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
       propertyPath: m_Name
       value: NewEntryFirstTalk
