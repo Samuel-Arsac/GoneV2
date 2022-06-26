@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class EndLoader : LocalManager<EndLoader>
+public class EndLoader : ProjectManager<EndLoader>
 {
     [SerializeField] private Animator fadeAnimator;
 

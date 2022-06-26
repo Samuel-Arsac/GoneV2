@@ -3238,6 +3238,7 @@ GameObject:
   - component: {fileID: 1750264541787404292}
   - component: {fileID: 452744362560070793}
   - component: {fileID: 1294027863481886302}
+  - component: {fileID: 246428546063528204}
   m_Layer: 0
   m_Name: Text_Button
   m_TagString: Untagged
@@ -3254,14 +3255,14 @@ RectTransform:
   m_GameObject: {fileID: 25264130856500960}
   m_LocalRotation: {x: -0, y: -0, z: 0.0000000074505797, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.140917, y: 1.140917, z: 1.140917}
   m_Children: []
   m_Father: {fileID: 6473991916978478583}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 326.84857, y: 60.654217}
+  m_AnchoredPosition: {x: 326.84857, y: 59.8}
   m_SizeDelta: {x: 193.408, y: 36.3673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1750264541787404292
@@ -3331,6 +3332,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 246428546063528204}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -3338,6 +3351,18 @@ MonoBehaviour:
         - m_Target: {fileID: 4769234235846974530}
           m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
           m_MethodName: OutlineZoneHide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 246428546063528204}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3375,6 +3400,32 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 246428546063528204}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &246428546063528204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25264130856500960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c1ed05c9776e2448d740346afc8ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSprite: {fileID: 21300000, guid: 7bea882ce4cf78e418ace0661de83357, type: 3}
+  linkedSection: {fileID: 0}
 --- !u!1 &85113091675556735
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,10 +3540,10 @@ RectTransform:
   m_Father: {fileID: 1805216499016462798}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 165, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &269760872468328669
 CanvasRenderer:
@@ -6335,7 +6386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7487,7 +7538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1337830415456190270
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11184,6 +11235,7 @@ GameObject:
   - component: {fileID: 2873328194222157785}
   - component: {fileID: 8333163118661816093}
   - component: {fileID: 3501661969045488111}
+  - component: {fileID: 8884083142990684466}
   m_Layer: 0
   m_Name: Text_Button
   m_TagString: Untagged
@@ -11200,14 +11252,14 @@ RectTransform:
   m_GameObject: {fileID: 1689829268182082075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0921, y: 1.0921, z: 1.0921}
   m_Children: []
   m_Father: {fileID: 302362793980341308}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 815.4629, y: 56.612083}
+  m_AnchoredPosition: {x: 812.1, y: 56.612083}
   m_SizeDelta: {x: 226.9309, y: 64.9375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2873328194222157785
@@ -11277,6 +11329,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 8884083142990684466}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -11284,6 +11348,18 @@ MonoBehaviour:
         - m_Target: {fileID: 2344597767867044677}
           m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
           m_MethodName: OutlineZoneHide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 8884083142990684466}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -11321,6 +11397,32 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 8884083142990684466}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &8884083142990684466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689829268182082075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c1ed05c9776e2448d740346afc8ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSprite: {fileID: 21300000, guid: 669973b0db77a5f479e6ace5259d9f0c, type: 3}
+  linkedSection: {fileID: 0}
 --- !u!1 &1784849134709885542
 GameObject:
   m_ObjectHideFlags: 0
@@ -11631,10 +11733,10 @@ RectTransform:
   m_Father: {fileID: 1805216499016462798}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 165, y: 180}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2331561310428701499
 CanvasRenderer:
@@ -12437,7 +12539,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7687270369093979285}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5050845785550656958
 MonoBehaviour:
@@ -12958,6 +13060,7 @@ GameObject:
   - component: {fileID: 1209305963586175087}
   - component: {fileID: 3792588246793674208}
   - component: {fileID: 5721178646233761681}
+  - component: {fileID: 4579239986814114527}
   m_Layer: 0
   m_Name: Text_Button
   m_TagString: Untagged
@@ -12974,14 +13077,14 @@ RectTransform:
   m_GameObject: {fileID: 3515903707595570128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5431, y: 1.5431, z: 1.5431}
   m_Children: []
   m_Father: {fileID: 4300322668240639056}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1219, y: 431}
+  m_AnchoredPosition: {x: 1219, y: 421.8}
   m_SizeDelta: {x: 110.6363, y: 31.7384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1209305963586175087
@@ -13051,6 +13154,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 4579239986814114527}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -13058,6 +13173,18 @@ MonoBehaviour:
         - m_Target: {fileID: 4710566766906241748}
           m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
           m_MethodName: OutlineZoneHide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 4579239986814114527}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -13095,6 +13222,32 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 4579239986814114527}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &4579239986814114527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3515903707595570128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c1ed05c9776e2448d740346afc8ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSprite: {fileID: 21300000, guid: a19efb57fc140c942a6a5d92034c64d2, type: 3}
+  linkedSection: {fileID: 0}
 --- !u!1 &3564569764101376238
 GameObject:
   m_ObjectHideFlags: 0
@@ -14503,10 +14656,10 @@ RectTransform:
   m_Father: {fileID: 1805216499016462798}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -65, y: 180}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6388826817697836322
 CanvasRenderer:
@@ -15975,6 +16128,7 @@ GameObject:
   - component: {fileID: 7778664844622394705}
   - component: {fileID: 3225403029673316298}
   - component: {fileID: 23766453890494928}
+  - component: {fileID: 6009458116553436539}
   m_Layer: 0
   m_Name: Text_Button
   m_TagString: Untagged
@@ -15991,7 +16145,7 @@ RectTransform:
   m_GameObject: {fileID: 5283547352663100788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4335997, y: 1.4335997, z: 1.4335997}
   m_Children: []
   m_Father: {fileID: 5123516364524214593}
   m_RootOrder: 1
@@ -16068,6 +16222,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 6009458116553436539}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -16075,6 +16241,18 @@ MonoBehaviour:
         - m_Target: {fileID: 8852358276920361537}
           m_TargetAssemblyTypeName: UIMap_Button, Assembly-CSharp
           m_MethodName: OutlineZoneHide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6009458116553436539}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16112,6 +16290,32 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 6009458116553436539}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &6009458116553436539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5283547352663100788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c1ed05c9776e2448d740346afc8ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSprite: {fileID: 21300000, guid: 8c19f9885fe29f04c8d2c54f762f3ac4, type: 3}
+  linkedSection: {fileID: 0}
 --- !u!1 &5411156610263167685
 GameObject:
   m_ObjectHideFlags: 0
@@ -18251,10 +18455,10 @@ RectTransform:
   m_Father: {fileID: 1805216499016462798}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -65, y: -280}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5832853585726161774
 CanvasRenderer:
@@ -19118,7 +19322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -19214,6 +19418,7 @@ Transform:
   - {fileID: 2011889008946065528}
   - {fileID: 4737683450528676607}
   - {fileID: 7687270368208924485}
+  - {fileID: 2629078929757474446}
   - {fileID: 3469501285504436830}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -20095,10 +20300,10 @@ RectTransform:
   m_Father: {fileID: 1805216499016462798}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -65, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3329187639656156471
 CanvasRenderer:
@@ -20522,10 +20727,10 @@ RectTransform:
   m_Father: {fileID: 1805216499016462798}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 165, y: -280}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5428985302441834563
 CanvasRenderer:
@@ -21014,6 +21219,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2297a10ed6418da40af2019d542f93b5, type: 3}
+--- !u!1 &3553485119449845262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3107902851707994242, guid: 2297a10ed6418da40af2019d542f93b5, type: 3}
+  m_PrefabInstance: {fileID: 1905584282148753036}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &3553485119449845261 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3107902851707994241, guid: 2297a10ed6418da40af2019d542f93b5, type: 3}
+  m_PrefabInstance: {fileID: 1905584282148753036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3553485119140843719 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3107902852002848331, guid: 2297a10ed6418da40af2019d542f93b5, type: 3}
@@ -21025,16 +21240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &3553485119449845261 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3107902851707994241, guid: 2297a10ed6418da40af2019d542f93b5, type: 3}
-  m_PrefabInstance: {fileID: 1905584282148753036}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3553485119449845262 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3107902851707994242, guid: 2297a10ed6418da40af2019d542f93b5, type: 3}
-  m_PrefabInstance: {fileID: 1905584282148753036}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1969268360439352202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21192,6 +21397,11 @@ PrefabInstance:
       objectReference: {fileID: 1399081946606699819}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e994476ec8ea5d4489cc4ca08979dba, type: 3}
+--- !u!224 &2223158047979746294 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 400258879889700988, guid: 7e994476ec8ea5d4489cc4ca08979dba, type: 3}
+  m_PrefabInstance: {fileID: 1969268360439352202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8534725950032115333 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7864779373488880911, guid: 7e994476ec8ea5d4489cc4ca08979dba, type: 3}
@@ -21206,11 +21416,6 @@ MonoBehaviour:
 --- !u!1 &2984627121754417420 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3620816783214928518, guid: 7e994476ec8ea5d4489cc4ca08979dba, type: 3}
-  m_PrefabInstance: {fileID: 1969268360439352202}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &2223158047979746294 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 400258879889700988, guid: 7e994476ec8ea5d4489cc4ca08979dba, type: 3}
   m_PrefabInstance: {fileID: 1969268360439352202}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4000849397753813416
@@ -21477,6 +21682,108 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5823360088103014570, guid: c2ccc359d77a9294da8bb4e452f21781, type: 3}
   m_PrefabInstance: {fileID: 4805114323451488696}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6598565271212591372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7687270369093979285}
+    m_Modifications:
+    - target: {fileID: 637720012897632733, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_Name
+      value: EndLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+--- !u!224 &2629078929757474446 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 9218461051651327874, guid: 30f881accc2ab554b8b5015d9afe0129, type: 3}
+  m_PrefabInstance: {fileID: 6598565271212591372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6853947599383995006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21703,13 +22010,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 293dfd3e966a70d4ba0402931b25ad52, type: 3}
---- !u!4 &9030907329627201304 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 372596406997266667, guid: 293dfd3e966a70d4ba0402931b25ad52, type: 3}
-  m_PrefabInstance: {fileID: 8682799529139777523}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9030907329627201306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 372596406997266665, guid: 293dfd3e966a70d4ba0402931b25ad52, type: 3}
+  m_PrefabInstance: {fileID: 8682799529139777523}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9030907329627201304 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 372596406997266667, guid: 293dfd3e966a70d4ba0402931b25ad52, type: 3}
   m_PrefabInstance: {fileID: 8682799529139777523}
   m_PrefabAsset: {fileID: 0}
