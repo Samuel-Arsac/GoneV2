@@ -2151,8 +2151,8 @@ MonoBehaviour:
     nextDialogueIdx: 23
   - type: 1
     changeIllustration: 0
-    text: "Un code c\xE9sar. Un simple code de cryptage nomm\xE9 d\u2019apr\xE8s
-      un dirigeant du pass\xE9 lointain."
+    text: "Un code c\xE9sar. Un code simple de cryptage nomm\xE9 d\u2019apr\xE8s
+      un grand homme des temps anciens."
     playSound: 0
     stringToPlay: 
     changement: 0
