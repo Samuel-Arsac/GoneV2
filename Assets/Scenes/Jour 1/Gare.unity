@@ -311,7 +311,7 @@ MonoBehaviour:
     changementAfterDialogue: 0
     objectsAfterChangement: {fileID: 0}
     text: "Je suis Gersande, l\u2019Ambassadrice de la gare Technograd-New Samara,
-      ici pour vous accueillir. Puis-je voir votre ticket de s\xE9jour ?"
+      ici pour vous accueillir dans notre merveilleuse cit\xE9 !"
     noNames: 0
     unknownCharacter: 0
     playSound: 0
@@ -321,7 +321,7 @@ MonoBehaviour:
     isPetraTalking: 0
     isPetraThinking: 0
     isThirdTalking: 0
-    nextDialogueIdx: 3
+    nextDialogueIdx: 22
     characterToTalkSpriteIdx: 0
     IsOtherInterlocutorHere: 1
     otherInterlocutorSpriteIdx: 0
@@ -674,6 +674,24 @@ MonoBehaviour:
     IsOtherInterlocutorHere: 1
     otherInterlocutorSpriteIdx: 0
     petraSpriteIdx: 2
+  - type: 0
+    changementAfterDialogue: 0
+    objectsAfterChangement: {fileID: 0}
+    text: "Puis-je vois votre ticket de s\xE9jour ?"
+    noNames: 0
+    unknownCharacter: 0
+    playSound: 0
+    soundToPlay: 
+    isPetraHere: 1
+    isFirstInterlocutorHere: 1
+    isPetraTalking: 0
+    isPetraThinking: 0
+    isThirdTalking: 0
+    nextDialogueIdx: 3
+    characterToTalkSpriteIdx: 0
+    IsOtherInterlocutorHere: 1
+    otherInterlocutorSpriteIdx: 0
+    petraSpriteIdx: 0
   proofsPresentations: 1
   myProofLists:
   - objectToProgress: "Ticket de s\xE9jour"

@@ -26,6 +26,7 @@ public class EndLoader : ProjectManager<EndLoader>
 
     public void LoadEnd()
     {
+        UIManager.Instance.DisableButtons();
         SceneManager.LoadScene("End");
     }
 }

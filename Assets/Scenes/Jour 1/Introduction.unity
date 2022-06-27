@@ -2243,7 +2243,7 @@ MonoBehaviour:
     oldObjets: []
     isPetraTalking: 1
     showingObject: 0
-    nextDialogueIdx: 31
+    nextDialogueIdx: 32
   - type: 0
     changeIllustration: 0
     text: ' '
@@ -2259,8 +2259,8 @@ MonoBehaviour:
     changeIllustration: 0
     text: "Attention \xE0 tous les passagers. Nous arrivons actuellement en gare
       de Technograd. Je r\xE9p\xE8te, gare de Technograd."
-    playSound: 0
-    stringToPlay: 
+    playSound: 1
+    stringToPlay: Alarm
     changement: 0
     newObjets: []
     oldObjets: []
