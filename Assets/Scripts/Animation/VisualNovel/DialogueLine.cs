@@ -13,6 +13,7 @@ public class DialogueLine
 
     public bool noNames = false;
     public bool unknownCharacter = false;
+    public bool showingObject = false;
 
     public bool playSound;
     [ShowIf("playSound")][AllowNesting] public string soundToPlay;

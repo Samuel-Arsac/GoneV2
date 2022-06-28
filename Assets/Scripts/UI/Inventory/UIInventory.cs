@@ -33,6 +33,9 @@ public class UIInventory : LocalManager<UIInventory>
     private EventTrigger.Entry entryClick;
     private EventTrigger.Entry entryEnter;
     private EventTrigger.Entry entryExit;
+
+    EventTrigger.Entry hoverEntry;
+    EventTrigger.Entry exitEntry;
     private Highlight highlight;
 
     protected override void Awake()
@@ -71,8 +74,21 @@ public class UIInventory : LocalManager<UIInventory>
 
             EventTrigger trigger = items[i].gameObject.GetComponent<EventTrigger>();
             EventTrigger.Entry entry = trigger.triggers.Find(t => t.eventID == EventTriggerType.PointerClick);
-            entry.callback.AddListener(DisplayDescriptionOnClick);     
+            entry.callback.AddListener(DisplayDescriptionOnClick);
 
+            Items_SO itemData = items[i].GetComponent<Item>().itemData;
+
+            if(gotWatch)
+            {
+                if (itemData.canExamine)
+                {
+                    hoverEntry = trigger.triggers.Find(t => t.eventID == EventTriggerType.PointerEnter);
+                    hoverEntry.callback.AddListener(DisplayWatchAnimatedOnHover);
+
+                    exitEntry = trigger.triggers.Find(t => t.eventID == EventTriggerType.PointerExit);
+                    exitEntry.callback.AddListener(HideWatchAnimatedOnExit);
+                }
+            }
         }
     }
 
@@ -145,6 +161,18 @@ public class UIInventory : LocalManager<UIInventory>
         }                     
     }
 
+    public void DisplayWatchAnimatedOnHover(BaseEventData ctx)
+    {
+        Debug.Log("Jour");
+        animatedWatch.SetActive(true);
+    }
+
+    public void HideWatchAnimatedOnExit(BaseEventData ctx)
+    {
+        Debug.Log("Nuit");
+        animatedWatch.SetActive(false);
+    }
+
     public void HideUIInventory()
     {
         closeBagButton.SetActive(true);
@@ -188,6 +216,7 @@ public class UIInventory : LocalManager<UIInventory>
 
     public void DisplayDescription(Item itemClicked)
     {
+        exitEntry.callback.RemoveListener(HideWatchAnimatedOnExit);
         readItem = itemClicked;
         descriptionSection.SetActive(true);
         itemNameText.text = itemClicked.itemData.itemName;
@@ -216,8 +245,14 @@ public class UIInventory : LocalManager<UIInventory>
         }
     }
 
+    public void CallHideDescription(BaseEventData data)
+    {
+        HideDescription();
+    }
+
     public void HideDescription()
     {
+        exitEntry.callback.AddListener(HideWatchAnimatedOnExit);
         RemoveFunctionToTrigger();
         descriptionSection.SetActive(false);
         animatedWatch.SetActive(false);

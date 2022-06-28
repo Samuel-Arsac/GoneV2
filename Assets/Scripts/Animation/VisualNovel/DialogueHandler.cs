@@ -127,6 +127,11 @@ public class DialogueHandler : ProjectManager<DialogueHandler>
 
        UIManager.Instance.DisplaySprites();
        UIManager.Instance.DisplayNames();
+
+        if (characterInfo.dialogueList[currentDialogueIdx].playSound)
+        {
+            AudioManager.Instance.PlaySFX(characterInfo.dialogueList[currentDialogueIdx].soundToPlay);
+        }
    }
 
    public void GoodProofPresentation()

@@ -970,7 +970,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 465855778103335838, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
       propertyPath: newEntries.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 465855778103335838, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
       propertyPath: newCharacters.Array.size
@@ -979,7 +979,7 @@ PrefabInstance:
     - target: {fileID: 465855778103335838, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
       propertyPath: newEntries.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: afb828e6cb0dd54488595792c44bbda3, type: 2}
     - target: {fileID: 465855778103335838, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
       propertyPath: newEntries.Array.data[1]
       value: 
@@ -2684,8 +2684,8 @@ MonoBehaviour:
   newChangement: 1
   newObjects:
   - {fileID: 1313258647}
-  - {fileID: 610112775}
   - {fileID: 454923615}
+  - {fileID: 610112775}
   destroyWhenChangement:
   - {fileID: 1328818814}
   objectsToInstantiate: []

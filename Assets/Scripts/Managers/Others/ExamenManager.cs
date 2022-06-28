@@ -65,6 +65,7 @@ public class ExamenManager : LocalManager<ExamenManager>
     {
         examenSection.SetActive(false);
         UIManager.Instance.EnableInteractionEnvironnment();
+        UIManager.Instance.DisplayIcons();
     }
 
 }

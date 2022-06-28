@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     Vector2 _originalPosition;
     public CanvasGroup itemCanvasGroup;
@@ -26,6 +26,11 @@ public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     public void OnPointerDown(PointerEventData ctx)
     {
         CursorsManager.instance.DragCursorDisplay();
+    }
+
+    public void OnPointerUp(PointerEventData ctx)
+    {
+        CursorsManager.instance.DisplayDefaultCursor();
     }
 
     public void OnBeginDrag(PointerEventData ctx)

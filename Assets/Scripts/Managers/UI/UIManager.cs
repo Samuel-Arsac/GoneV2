@@ -7,6 +7,8 @@ using TMPro;
 using NaughtyAttributes;
 public class UIManager : ProjectManager<UIManager>
 {
+    [SerializeField] private GameObject objectToShow;
+
     [Foldout("Menus")]
     public bool menuAlreadyOpen = false;
     [Foldout("Menus")]
@@ -304,6 +306,24 @@ public class UIManager : ProjectManager<UIManager>
             HideEnviroCursor();
         }
 
+        if(dialogueLine.showingObject)
+        {
+            DisplayObject();
+            DialogueHandler.Instance.SetImageDialoguePosition(petraImage);
+        }
+        else
+        {
+            HideObject();
+            if(dialogueLine.isFirstInterlocutorHere)
+            {
+                DialogueHandler.Instance.SetImageDialoguePosition(petraImage);
+            }
+            else
+            {
+                DialogueHandler.Instance.SetImageMonologuePosition(petraImage);
+            }
+            
+        }
     }
 
     public void DisplayPastBackColor()
@@ -844,7 +864,15 @@ public class UIManager : ProjectManager<UIManager>
 
     #endregion
 
-    
+    public void DisplayObject()
+    {
+        objectToShow.SetActive(true);
+    }
+
+    public void HideObject()
+    {
+        objectToShow.SetActive(false);
+    }
     private void Update()
     {
         if (!isInspectingEnviro)
