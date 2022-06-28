@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: Hangars
-  comeFromMenu: 1
+  comeFromMenu: 0
 --- !u!4 &442307030
 Transform:
   m_ObjectHideFlags: 0
@@ -2057,6 +2057,14 @@ PrefabInstance:
       propertyPath: newEntries.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 49831f5730e389342ae4c9e31abc23df, type: 2}
+    - target: {fileID: 3192919958466724430, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
+      propertyPath: autoPlay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192919958466724430, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
+      propertyPath: autoGenerate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5171860358756000808, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
       propertyPath: m_Name
       value: NewEntriesTrigger
@@ -2064,6 +2072,18 @@ PrefabInstance:
     - target: {fileID: 5171860358756000808, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874438000195289539, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1993831
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874438000195289539, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1993831
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874438000195289539, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1993831
       objectReference: {fileID: 0}
     - target: {fileID: 7491437299953777212, guid: 1ffa4d25d755678448781f03558cd409, type: 3}
       propertyPath: m_RootOrder
@@ -7333,7 +7353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6101894702719540201, guid: 529279a2bdf7d4448854addb752a61dd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8254824255309421277, guid: 529279a2bdf7d4448854addb752a61dd, type: 3}
       propertyPath: m_IsActive

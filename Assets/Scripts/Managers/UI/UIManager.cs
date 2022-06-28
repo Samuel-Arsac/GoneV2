@@ -530,6 +530,11 @@ public class UIManager : ProjectManager<UIManager>
            }
       }
 
+      if(characterInfo.pastDialogue)
+        {
+            DisableInteractionEnvironnment();
+        }
+
         DisableBlurEffect();
         DisplayIcons();
         
