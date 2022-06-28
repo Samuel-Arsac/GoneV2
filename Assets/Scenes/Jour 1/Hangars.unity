@@ -618,7 +618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14026937, y: -0.008168735, z: -10}
+  m_LocalPosition: {x: 0.13938722, y: -0.008168735, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1480,9 +1480,8 @@ MonoBehaviour:
   - type: 0
     changementAfterDialogue: 0
     objectsAfterChangement: {fileID: 0}
-    text: "Est-ce qu\u2019il a fait quelque chose pour les \xE9nerver\u202F? Est-ce
-      que c\u2019est pour \xE7a qu\u2019il m\u2019a contact\xE9\u202F? Il s\u2019est
-      fait capturer par ce gang\u202F?"
+    text: " Est-ce que c\u2019est pour \xE7a qu\u2019il m\u2019a contact\xE9\u202F?
+      Il s\u2019est fait capturer par ce gang\u202F?"
     noNames: 0
     unknownCharacter: 0
     playSound: 0
