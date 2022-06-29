@@ -271,6 +271,7 @@ MonoBehaviour:
       pour aller \xE0 l\u2019h\xF4tel, mais je n\u2019ai pas eu le temps d\u2019admirer\u2026 "
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -290,6 +291,7 @@ MonoBehaviour:
       gare, il n\u2019a pas train\xE9\u202F!"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -309,6 +311,7 @@ MonoBehaviour:
       la gare, je vais devoir trouver quelqu\u2019un ici pour me guider"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -386,12 +389,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1243610537}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.9992, y: -1.7896}
-  m_SizeDelta: {x: 1.4151, y: 2.3957}
+  m_AnchoredPosition: {x: -2.11, y: -2.324}
+  m_SizeDelta: {x: 1.0417, y: 1.7636}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &136002524
 MonoBehaviour:
@@ -570,6 +573,7 @@ MonoBehaviour:
     text: "Ah, parfait, je vous cherchais\u202F!"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -588,6 +592,7 @@ MonoBehaviour:
     text: "\u2026"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -607,6 +612,7 @@ MonoBehaviour:
       confondu avec quelqu\u2019un d\u2019autre\u2026\u202F"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -625,6 +631,7 @@ MonoBehaviour:
     text: "\u2026\u202F"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -643,6 +650,7 @@ MonoBehaviour:
     text: "\u2026 Ce n\u2019est pas vous, n\u2019est-ce pas \u2026\u202F?\u202F"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -661,6 +669,7 @@ MonoBehaviour:
     text: "\u2026"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -680,6 +689,7 @@ MonoBehaviour:
       d\u2019autre."
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -1357,7 +1367,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b9bc063408c29147a510585e6056f0b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5ef308c312704a41af1585ef5fe59c4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1500,7 +1510,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1243610537}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1689,6 +1699,7 @@ MonoBehaviour:
       puisse me guider."
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -1807,6 +1818,357 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &747622171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 747622172}
+  - component: {fileID: 747622178}
+  - component: {fileID: 747622177}
+  - component: {fileID: 747622176}
+  - component: {fileID: 747622175}
+  - component: {fileID: 747622174}
+  - component: {fileID: 747622173}
+  - component: {fileID: 747622179}
+  m_Layer: 5
+  m_Name: Lightning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &747622172
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747622171}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1243610537}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.5991, y: 1.2485}
+  m_SizeDelta: {x: 5.6338, y: 5.4738}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &747622173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747622171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 747622176}
+          m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+          m_MethodName: EnterObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 747622174}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 747622176}
+          m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+          m_MethodName: ExitObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 747622174}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 747622176}
+          m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 747622174}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &747622174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747622171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c1ed05c9776e2448d740346afc8ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSprite: {fileID: 21300000, guid: 64dc3440ad676c94cb757e61f9243b9c, type: 3}
+  linkedSection: {fileID: 0}
+--- !u!114 &747622175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747622171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4773609fada066c45bbf1438dfe3b7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameSprite:
+  - {fileID: 21300000, guid: b05258fc14164f74a8f974b1a78fdf9c, type: 3}
+  isAlone: 1
+  pastDialogue: 0
+  gotLinkCharacter: 0
+  linkCharacter: {fileID: 0}
+  autoLaunch: 0
+  waitForLaunchTime: 0
+  newChangement: 0
+  newObjects: []
+  destroyWhenChangement: []
+  objectsToInstantiate: []
+  FirstCharacterSprites:
+  - {fileID: 21300000, guid: 696212fb864ce9145bb631adde2206a0, type: 3}
+  anotherInterlocutor: 0
+  OtherToTalkSprites: []
+  PetraSprites:
+  - {fileID: 21300000, guid: fec0ac9b47a33d140a2536228439c054, type: 3}
+  - {fileID: 21300000, guid: f20aa2464df61db48b1f7f511dbba495, type: 3}
+  - {fileID: 21300000, guid: d9a1bc88ef85e9b4095e06bd68e9cfda, type: 3}
+  - {fileID: 21300000, guid: d34548298a95a20408763bd6012196d4, type: 3}
+  - {fileID: 21300000, guid: 3c7b120817d96ef40ab08e54de9da162, type: 3}
+  - {fileID: 21300000, guid: d101db56bdd2dc34886db2610d2b05f3, type: 3}
+  - {fileID: 21300000, guid: 761f6d9fb6943e54aa33ea5e38c986a3, type: 3}
+  - {fileID: 21300000, guid: 49b0e8ee65537254c83d83f444940747, type: 3}
+  - {fileID: 21300000, guid: 3a5eaf498aa260b438d345807cf7756f, type: 3}
+  - {fileID: 21300000, guid: a694fb83a3272484eb4f67a7411ed993, type: 3}
+  - {fileID: 21300000, guid: e26a9fedc1dfb334986bbe69b194d55c, type: 3}
+  - {fileID: 21300000, guid: 587f0ec5aba29444aa0af418b2475b0e, type: 3}
+  - {fileID: 21300000, guid: 86afb16bc0af4be45b771f2b89adc833, type: 3}
+  - {fileID: 21300000, guid: 0808fb3472e37fd4ba5cbd56c2a70903, type: 3}
+  - {fileID: 21300000, guid: c017c73d71b01f7478abc0612f899c2f, type: 3}
+  - {fileID: 21300000, guid: 1a66244aa25397a4db69a0c58e928d4b, type: 3}
+  - {fileID: 21300000, guid: f8cf733de7b49fc4a8a755a31f8f3b13, type: 3}
+  myDialogueList:
+  - type: 0
+    changementAfterDialogue: 0
+    objectsAfterChangement: {fileID: 0}
+    text: "C\u2019est le pivot central, qui servait de support \xE0 l\u2019\xEEle
+      enti\xE8re lors de sa construction."
+    noNames: 0
+    unknownCharacter: 0
+    showingObject: 0
+    playSound: 0
+    soundToPlay: 
+    isPetraHere: 1
+    isFirstInterlocutorHere: 0
+    isPetraTalking: 1
+    isPetraThinking: 1
+    isThirdTalking: 0
+    nextDialogueIdx: 1
+    characterToTalkSpriteIdx: 0
+    IsOtherInterlocutorHere: 0
+    otherInterlocutorSpriteIdx: 0
+    petraSpriteIdx: 9
+  - type: 0
+    changementAfterDialogue: 0
+    objectsAfterChangement: {fileID: 0}
+    text: "Maintenant que les h\xE9lices supportent l\u2019\xEEle de toutes parts,
+      cela ne sert plus \xE0 grand-chose."
+    noNames: 0
+    unknownCharacter: 0
+    showingObject: 0
+    playSound: 0
+    soundToPlay: 
+    isPetraHere: 1
+    isFirstInterlocutorHere: 0
+    isPetraTalking: 1
+    isPetraThinking: 1
+    isThirdTalking: 0
+    nextDialogueIdx: 2
+    characterToTalkSpriteIdx: 0
+    IsOtherInterlocutorHere: 0
+    otherInterlocutorSpriteIdx: 0
+    petraSpriteIdx: 9
+  - type: 0
+    changementAfterDialogue: 0
+    objectsAfterChangement: {fileID: 0}
+    text: "Cela fait cependant un bon m\xE9morial du pass\xE9 de la Trimadina."
+    noNames: 0
+    unknownCharacter: 0
+    showingObject: 0
+    playSound: 0
+    soundToPlay: 
+    isPetraHere: 1
+    isFirstInterlocutorHere: 0
+    isPetraTalking: 1
+    isPetraThinking: 1
+    isThirdTalking: 0
+    nextDialogueIdx: 3
+    characterToTalkSpriteIdx: 0
+    IsOtherInterlocutorHere: 0
+    otherInterlocutorSpriteIdx: 0
+    petraSpriteIdx: 9
+  - type: 2
+    changementAfterDialogue: 0
+    objectsAfterChangement: {fileID: 0}
+    text: "Comme celui de New Samara, il a \xE9t\xE9 am\xE9nag\xE9 pour le rendre
+      plus esth\xE9tique."
+    noNames: 0
+    unknownCharacter: 0
+    showingObject: 0
+    playSound: 0
+    soundToPlay: 
+    isPetraHere: 1
+    isFirstInterlocutorHere: 0
+    isPetraTalking: 1
+    isPetraThinking: 1
+    isThirdTalking: 0
+    nextDialogueIdx: 3
+    characterToTalkSpriteIdx: 0
+    IsOtherInterlocutorHere: 0
+    otherInterlocutorSpriteIdx: 0
+    petraSpriteIdx: 9
+  proofsPresentations: 0
+  myProofLists: []
+--- !u!114 &747622176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747622171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070f2c6a616761442bd5a4ec098045c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableType: 3
+--- !u!114 &747622177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747622171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.34901962}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -5744522572577396750, guid: eb9583a90761887418380dd452d92eaf, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &747622178
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747622171}
+  m_CullTransparentMesh: 1
+--- !u!95 &747622179
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747622171}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d58e424d23ec314c85a9c7306065fb5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &994532553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,17 +2412,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090819958}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.00015523318, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1243610537}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.018}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.29, y: 0.5543997}
-  m_SizeDelta: {x: 8.5834, y: 6.6271}
+  m_AnchoredPosition: {x: 0.1525, y: 0.5475}
+  m_SizeDelta: {x: 7.6493, y: 6.5331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1090819960
 MonoBehaviour:
@@ -2213,6 +2575,7 @@ MonoBehaviour:
       enti\xE8re lors de sa construction."
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -2232,6 +2595,7 @@ MonoBehaviour:
       cela ne sert plus \xE0 grand-chose."
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -2250,6 +2614,7 @@ MonoBehaviour:
     text: "Cela fait cependant un bon m\xE9morial du pass\xE9 de la Trimadina."
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -2269,6 +2634,7 @@ MonoBehaviour:
       plus esth\xE9tique."
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -2382,6 +2748,7 @@ RectTransform:
   m_Children:
   - {fileID: 1651525516}
   - {fileID: 1090819959}
+  - {fileID: 747622172}
   - {fileID: 1328818815}
   - {fileID: 610112776}
   - {fileID: 136002523}
@@ -2603,7 +2970,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1243610537}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2721,6 +3088,7 @@ MonoBehaviour:
     text: "Excusez-moi, jeune homme\u2026"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -2741,6 +3109,7 @@ MonoBehaviour:
       peux faire pour vous\u202F?\u202F"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -2759,6 +3128,7 @@ MonoBehaviour:
     text: "Hum\u2026 Est-ce que tu pourrais m\u2019indiquer le chemin vers les Hangars\u202F?"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -2778,6 +3148,7 @@ MonoBehaviour:
       juste ou vous voulez aller sur votre carte et je vous y emm\xE8nerais\u202F!"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -2796,6 +3167,7 @@ MonoBehaviour:
     text: "Parfait, merci\u202F!"
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -3516,6 +3888,7 @@ MonoBehaviour:
       proche du centre de l\u2019\xEEle."
     noNames: 0
     unknownCharacter: 0
+    showingObject: 0
     playSound: 0
     soundToPlay: 
     isPetraHere: 1
@@ -3820,7 +4193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6101894702719540201, guid: 529279a2bdf7d4448854addb752a61dd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8254824255309421277, guid: 529279a2bdf7d4448854addb752a61dd, type: 3}
       propertyPath: m_IsActive
