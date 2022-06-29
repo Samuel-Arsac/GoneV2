@@ -314,7 +314,7 @@ public class UIManager : ProjectManager<UIManager>
         else
         {
             HideObject();
-            if(dialogueLine.isFirstInterlocutorHere)
+            if(dialogueLine.isFirstInterlocutorHere || dialogueLine.IsOtherInterlocutorHere)
             {
                 DialogueHandler.Instance.SetImageDialoguePosition(petraImage);
             }
@@ -355,6 +355,7 @@ public class UIManager : ProjectManager<UIManager>
 
         if(currentLine.isThirdTalking)
         {
+            Debug.Log("Oui");
             interlocutorName.GetComponent<Image>().sprite = DialogueHandler.Instance.characterInfo.characterNameSprite[1];
         }
 
