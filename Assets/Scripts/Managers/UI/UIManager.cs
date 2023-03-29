@@ -353,12 +353,7 @@ public class UIManager : ProjectManager<UIManager>
             interlocutorName.SetActive(true);
         }
 
-        if(currentLine.isThirdTalking)
-        {
-            Debug.Log("ThirdTalking");
-            Debug.Log(DialogueHandler.Instance.characterInfo.characterNameSprite[1].name);
-            interlocutorName.GetComponent<Image>().sprite = DialogueHandler.Instance.characterInfo.characterNameSprite[1];
-        }
+        
 
         if(currentLine.noNames)
         {
@@ -396,6 +391,7 @@ public class UIManager : ProjectManager<UIManager>
                 }
                 else
                 {
+                    Debug.Log("ThirdTalking");
                     interlocutorName.GetComponent<Image>().sprite = DialogueHandler.Instance.characterInfo.characterNameSprite[1];
                 }
                 interlocutorName.GetComponent<Image>().SetNativeSize();
@@ -405,7 +401,14 @@ public class UIManager : ProjectManager<UIManager>
         else
         {
             petraName.GetComponent<Image>().sprite = petraNameSpriteOriginal;
-            interlocutorName.GetComponent<Image>().sprite = DialogueHandler.Instance.characterInfo.characterNameSprite[0];
+            if (currentLine.isThirdTalking)
+            {
+                interlocutorName.GetComponent<Image>().sprite = DialogueHandler.Instance.characterInfo.characterNameSprite[1];
+            }
+            else
+            {
+                interlocutorName.GetComponent<Image>().sprite = DialogueHandler.Instance.characterInfo.characterNameSprite[0];
+            }
 
             interlocutorName.transform.position = originalInterlocutorNamePos.position;
         }
@@ -413,10 +416,6 @@ public class UIManager : ProjectManager<UIManager>
         if(currentLine.unknownCharacter)
         {
             interlocutorName.GetComponent<Image>().sprite = unknownNameSprite;
-        }
-        else
-        {
-            interlocutorName.GetComponent<Image>().sprite = DialogueHandler.Instance.characterInfo.characterNameSprite[0];
         }
 
     }
