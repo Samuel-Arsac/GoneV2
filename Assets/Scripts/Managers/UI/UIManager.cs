@@ -355,7 +355,8 @@ public class UIManager : ProjectManager<UIManager>
 
         if(currentLine.isThirdTalking)
         {
-            Debug.Log("Oui");
+            Debug.Log("ThirdTalking");
+            Debug.Log(DialogueHandler.Instance.characterInfo.characterNameSprite[1].name);
             interlocutorName.GetComponent<Image>().sprite = DialogueHandler.Instance.characterInfo.characterNameSprite[1];
         }
 
@@ -655,7 +656,7 @@ public class UIManager : ProjectManager<UIManager>
 
     public void DisableInteractionEnvironnment()
     {
-        Debug.Log("Oui");
+        //Debug.Log("DisableInteractionEnvironnement");
         interactableCanvas.interactable = false;
         interactableCanvas.blocksRaycasts = false;
     }

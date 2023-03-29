@@ -68,8 +68,8 @@ public class CameraManager : MonoBehaviour
         Vector2 realXValue = Camera.main.WorldToScreenPoint(new Vector2(x, 0f));
         Vector2 realYValue = Camera.main.WorldToScreenPoint(new Vector2(0f, y));
 
-        Debug.Log(realXValue);
-        Debug.Log(realYValue);
+        //Debug.Log(realXValue);
+        //Debug.Log(realYValue);
 
         if ((x != 0 || y != 0) && allowToMove)
         {
