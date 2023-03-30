@@ -10,6 +10,4 @@ public class EnableWatch : MonoBehaviour
     {
         UIManager.Instance.DisplayWatchButton();
     }
-
-        
 }
