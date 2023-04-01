@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 [System.Serializable]
 public class Sound 
 {
-    public enum AudioTypes {soundEffect, music}
+    public enum AudioTypes {soundEffect, music, dialogue}
     public AudioTypes audioType;
     public string name;
 

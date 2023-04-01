@@ -47,6 +47,7 @@ MonoBehaviour:
   mainMixerGroup: {fileID: 24300002, guid: 140b2a741496fde43a60d45f73045aef, type: 2}
   musicMixerGroup: {fileID: -816583142374632326, guid: 140b2a741496fde43a60d45f73045aef, type: 2}
   SFXMixerGroup: {fileID: 3417633623848546410, guid: 140b2a741496fde43a60d45f73045aef, type: 2}
+  dialogueMixerGroup: {fileID: -7249093178392055189, guid: 140b2a741496fde43a60d45f73045aef, type: 2}
   musics:
   - audioType: 1
     name: MainTheme
@@ -292,6 +293,21 @@ MonoBehaviour:
     volume: 0.25
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  dialogues:
+  - audioType: 2
+    name: Dialogue_01
+    clip: {fileID: 8300000, guid: bacbead4c4c235742bc2127eb98e0601, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Dialogue_02
+    clip: {fileID: 8300000, guid: 0d31121b728e50e49b4c91c3fca9c654, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
   currentTrack:
     audioType: 0

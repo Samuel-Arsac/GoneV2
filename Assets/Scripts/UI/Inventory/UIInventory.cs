@@ -163,13 +163,11 @@ public class UIInventory : LocalManager<UIInventory>
 
     public void DisplayWatchAnimatedOnHover(BaseEventData ctx)
     {
-        Debug.Log("Jour");
         animatedWatch.SetActive(true);
     }
 
     public void HideWatchAnimatedOnExit(BaseEventData ctx)
     {
-        Debug.Log("Nuit");
         animatedWatch.SetActive(false);
     }
 

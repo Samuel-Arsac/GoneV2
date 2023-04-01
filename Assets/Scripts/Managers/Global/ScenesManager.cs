@@ -24,6 +24,11 @@ public class ScenesManager : LocalManager<ScenesManager>
         Debug.Log("Leaving game");
     }
 
+    public string GetSceneName()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
+
     /*public void LoadNewZone(string sceneToLoad)
     {
         UIWorldMap.Instance.DisplayUIWordlMap();

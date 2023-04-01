@@ -18,6 +18,9 @@ public class DialogueLine
     public bool playSound;
     [ShowIf("playSound")][AllowNesting] public string soundToPlay;
 
+    public bool playDialogue;
+    [ShowIf("playDialogue")] [AllowNesting] public string dialogueToPlay;
+
     public bool isPetraHere;
     public bool isFirstInterlocutorHere;
     public bool isPetraTalking;

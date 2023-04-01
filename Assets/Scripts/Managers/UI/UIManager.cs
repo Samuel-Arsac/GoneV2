@@ -228,7 +228,13 @@ public class UIManager : ProjectManager<UIManager>
     //Cette fonction gère uniquement l'affichage du dialogue
     public void DisplayDialogueUI(DialogueLine dialogueLine)
     {
-        if(dialogueLine.isFirstInterlocutorHere)
+        if (dialogueLine.playDialogue)
+        {
+            Debug.Log(dialogueLine.dialogueToPlay);
+            AudioManager.Instance.PlayDialogue(dialogueLine.dialogueToPlay);
+        }
+
+        if (dialogueLine.isFirstInterlocutorHere)
         {
             int spriteidx = dialogueLine.characterToTalkSpriteIdx;
             characterImage.sprite = _characterInfo.firstCharacterSprites[spriteidx];
@@ -363,8 +369,7 @@ public class UIManager : ProjectManager<UIManager>
 
         if(DialogueHandler.Instance.characterInfo.pastDialogue)
         {
-
-            if(!currentLine.isPetraTalking && !currentLine.isThirdTalking)
+            if (!currentLine.isPetraTalking && !currentLine.isThirdTalking)
             {
                 interlocutorName.transform.position = originalPetraNamePos.position;
 
@@ -391,7 +396,6 @@ public class UIManager : ProjectManager<UIManager>
                 }
                 else
                 {
-                    Debug.Log("ThirdTalking");
                     interlocutorName.GetComponent<Image>().sprite = DialogueHandler.Instance.characterInfo.characterNameSprite[1];
                 }
                 interlocutorName.GetComponent<Image>().SetNativeSize();
@@ -482,8 +486,8 @@ public class UIManager : ProjectManager<UIManager>
 
     public void EndDialogue(bool isAlone)
     {
-      if(!isAlone)
-      {
+        if(!isAlone)
+        {
             CameraManager.instance.virtualCameraZoom.m_Priority -= 10;
             CameraManager.instance.virtualCameraZoom.m_Follow = null;
             DisableButtons();
@@ -493,18 +497,18 @@ public class UIManager : ProjectManager<UIManager>
             {
                 clickedCharacter.gameObject.SetActive(true);
             }
-      }
-      else
-      {
+        }
+        else
+        {
             EnableInteractionEnvironnment();
             EnableButtons();
-       }
-      if(characterInfo.gotLinkCharacter)
-      {
+        }
+        if(characterInfo.gotLinkCharacter)
+        {
             characterInfo.linkCharacter.SetActive(true);
-      }
+        }
 
-      if(characterInfo.newChangement)
+        if(characterInfo.newChangement)
       {
            if(characterInfo.newObjects != null)
            {
@@ -531,9 +535,10 @@ public class UIManager : ProjectManager<UIManager>
            }
       }
 
-      if(characterInfo.pastDialogue)
+        if(characterInfo.pastDialogue)
         {
             DisableInteractionEnvironnment();
+            AudioManager.Instance.SwapMusic(ScenesManager.Instance.GetSceneName());
         }
 
         DisableBlurEffect();
@@ -731,7 +736,6 @@ public class UIManager : ProjectManager<UIManager>
             if (isInspectingEnviro)
             {
                 CallFade();
-                AudioManager.Instance.SwapMusic("Hangars");
                 examenEnviroBackButton.SetActive(false);
                 pastInspection.SetActive(false);
 
@@ -751,11 +755,16 @@ public class UIManager : ProjectManager<UIManager>
                 DisplayIcons();
 
                 presentInspeciton.SetActive(true);
+
+                if(!DialogueHandler.Instance.characterInfo.pastDialogue)
+                {
+                    AudioManager.Instance.SwapMusic(ScenesManager.Instance.GetSceneName());
+                }
             }
             else
             {
                 CallFade();
-                AudioManager.Instance.SwapMusic("Hangars Reverse");
+                AudioManager.Instance.SwapMusic(ScenesManager.Instance.GetSceneName() + " Reverse");
                 CursorsManager.instance.HideCursor();
                 EnableInteractionEnvironnment();
                 HideIcons();
