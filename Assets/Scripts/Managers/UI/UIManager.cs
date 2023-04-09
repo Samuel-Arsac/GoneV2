@@ -51,6 +51,8 @@ public class UIManager : ProjectManager<UIManager>
 
     [SerializeField] private GameObject quitConfirmSection;
 
+    [SerializeField] private GameObject logSection;
+
     [Foldout("Fade Vignette")]
     [SerializeField] private float timeToFade = 1.25f;
     [Foldout("Fade Vignette")]
@@ -929,5 +931,19 @@ public class UIManager : ProjectManager<UIManager>
 
         InputsManager.Instance.controls.Keyboard.Back.performed += InputsManager.Instance.EscapeClick;
         InputsManager.Instance.controls.Keyboard.Back.performed -= InputsManager.Instance.EscapeLeave;
+    }
+
+    public void DisplayLogSection()
+    {
+        logSection.SetActive(true);
+        InputsManager.Instance.controls.Keyboard.Tab.performed += InputsManager.Instance.LogLeave;
+        InputsManager.Instance.controls.Keyboard.Tab.performed -= InputsManager.Instance.LogClick;
+    }
+
+    public void HideLogSection()
+    {
+        logSection.SetActive(false);
+        InputsManager.Instance.controls.Keyboard.Tab.performed -= InputsManager.Instance.LogLeave;
+        InputsManager.Instance.controls.Keyboard.Tab.performed += InputsManager.Instance.LogClick;
     }
 }

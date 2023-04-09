@@ -8,6 +8,7 @@ public class InputsManager :  LocalManager<InputsManager>
 {
     [SerializeField] private InputSystemUIInputModule UIModule;
     public Controls controls;
+    [SerializeField] private bool enableLog;
 
 
     protected override void Awake()
@@ -16,6 +17,10 @@ public class InputsManager :  LocalManager<InputsManager>
         controls = new Controls();
 
         controls.Keyboard.Back.performed += EscapeClick;
+        if(enableLog)
+        {
+            controls.Keyboard.Tab.performed += LogClick;
+        }
     }
 
     private void OnEnable()
@@ -57,6 +62,16 @@ public class InputsManager :  LocalManager<InputsManager>
     {
         UIManager.Instance.HideQuitConfirm();
 
+    }
+
+    public void LogClick(InputAction.CallbackContext context)
+    {
+        UIManager.Instance.DisplayLogSection();
+    }
+
+    public void LogLeave(InputAction.CallbackContext context)
+    {
+        UIManager.Instance.HideLogSection();
     }
 
 }
