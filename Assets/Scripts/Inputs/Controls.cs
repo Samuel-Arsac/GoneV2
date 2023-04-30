@@ -33,6 +33,14 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""EnableDebugMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""d09438c7-bc54-407f-9272-68747e20c1c1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -57,6 +65,17 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""action"": ""Tab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a50dc269-3f54-4dd1-8d3a-9542c51b806d"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EnableDebugMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -67,6 +86,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_Keyboard = asset.FindActionMap("Keyboard", throwIfNotFound: true);
         m_Keyboard_Back = m_Keyboard.FindAction("Back", throwIfNotFound: true);
         m_Keyboard_Tab = m_Keyboard.FindAction("Tab", throwIfNotFound: true);
+        m_Keyboard_EnableDebugMenu = m_Keyboard.FindAction("EnableDebugMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -118,12 +138,14 @@ public class @Controls : IInputActionCollection, IDisposable
     private IKeyboardActions m_KeyboardActionsCallbackInterface;
     private readonly InputAction m_Keyboard_Back;
     private readonly InputAction m_Keyboard_Tab;
+    private readonly InputAction m_Keyboard_EnableDebugMenu;
     public struct KeyboardActions
     {
         private @Controls m_Wrapper;
         public KeyboardActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Back => m_Wrapper.m_Keyboard_Back;
         public InputAction @Tab => m_Wrapper.m_Keyboard_Tab;
+        public InputAction @EnableDebugMenu => m_Wrapper.m_Keyboard_EnableDebugMenu;
         public InputActionMap Get() { return m_Wrapper.m_Keyboard; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -139,6 +161,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Tab.started -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnTab;
                 @Tab.performed -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnTab;
                 @Tab.canceled -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnTab;
+                @EnableDebugMenu.started -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnEnableDebugMenu;
+                @EnableDebugMenu.performed -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnEnableDebugMenu;
+                @EnableDebugMenu.canceled -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnEnableDebugMenu;
             }
             m_Wrapper.m_KeyboardActionsCallbackInterface = instance;
             if (instance != null)
@@ -149,6 +174,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Tab.started += instance.OnTab;
                 @Tab.performed += instance.OnTab;
                 @Tab.canceled += instance.OnTab;
+                @EnableDebugMenu.started += instance.OnEnableDebugMenu;
+                @EnableDebugMenu.performed += instance.OnEnableDebugMenu;
+                @EnableDebugMenu.canceled += instance.OnEnableDebugMenu;
             }
         }
     }
@@ -157,5 +185,6 @@ public class @Controls : IInputActionCollection, IDisposable
     {
         void OnBack(InputAction.CallbackContext context);
         void OnTab(InputAction.CallbackContext context);
+        void OnEnableDebugMenu(InputAction.CallbackContext context);
     }
 }

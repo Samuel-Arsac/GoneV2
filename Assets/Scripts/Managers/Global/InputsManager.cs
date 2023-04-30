@@ -21,6 +21,7 @@ public class InputsManager :  LocalManager<InputsManager>
         {
             controls.Keyboard.Tab.performed += LogClick;
         }
+        controls.Keyboard.EnableDebugMenu.performed += DebugMenuDisplay;
     }
 
     private void OnEnable()
@@ -74,4 +75,13 @@ public class InputsManager :  LocalManager<InputsManager>
         UIManager.Instance.HideLogSection();
     }
 
+    public void DebugMenuDisplay(InputAction.CallbackContext context)
+    {
+        DebugMenu.Instance.DisplayDebugMenu();
+    }
+
+    public void DebugMenuHide(InputAction.CallbackContext context)
+    {
+        DebugMenu.Instance.HideDebugMenu();
+    }
 }
