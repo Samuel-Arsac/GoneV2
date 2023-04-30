@@ -298,7 +298,7 @@ MonoBehaviour:
     showingObject: 0
     playSound: 0
     soundToPlay: 
-    playDialogue: 1
+    playDialogue: 0
     dialogueToPlay: Dialogue_01
     isPetraHere: 1
     isFirstInterlocutorHere: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
     showingObject: 0
     playSound: 0
     soundToPlay: 
-    playDialogue: 1
+    playDialogue: 0
     dialogueToPlay: Dialogue_02
     isPetraHere: 1
     isFirstInterlocutorHere: 0
@@ -7675,6 +7675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIModule: {fileID: 1457950170}
+  enableLog: 0
 --- !u!1001 &2117131210
 PrefabInstance:
   m_ObjectHideFlags: 0

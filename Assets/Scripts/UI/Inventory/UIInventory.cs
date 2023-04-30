@@ -214,7 +214,11 @@ public class UIInventory : LocalManager<UIInventory>
 
     public void DisplayDescription(Item itemClicked)
     {
-        exitEntry.callback.RemoveListener(HideWatchAnimatedOnExit);
+        if(gotWatch)
+        {
+            exitEntry.callback.RemoveListener(HideWatchAnimatedOnExit);
+        }
+        
         readItem = itemClicked;
         descriptionSection.SetActive(true);
         itemNameText.text = itemClicked.itemData.itemName;
@@ -250,7 +254,11 @@ public class UIInventory : LocalManager<UIInventory>
 
     public void HideDescription()
     {
-        exitEntry.callback.AddListener(HideWatchAnimatedOnExit);
+        if(gotWatch)
+        {
+            exitEntry.callback.AddListener(HideWatchAnimatedOnExit);
+        }
+        
         RemoveFunctionToTrigger();
         descriptionSection.SetActive(false);
         animatedWatch.SetActive(false);

@@ -2847,7 +2847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6101894702719540201, guid: 529279a2bdf7d4448854addb752a61dd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8254824255309421277, guid: 529279a2bdf7d4448854addb752a61dd, type: 3}
       propertyPath: m_IsActive
@@ -7007,7 +7007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIModule: {fileID: 0}
-  enableLog: 1
+  enableLog: 0
 --- !u!1001 &1064217205733510662
 PrefabInstance:
   m_ObjectHideFlags: 0
