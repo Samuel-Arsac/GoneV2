@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 public class AnimationLerp : MonoBehaviour
 {
-    [SerializeField] private Light2D pointLight;
+    [SerializeField] private UnityEngine.Rendering.Universal.Light2D pointLight;
 
     [SerializeField] private float minIntensity = 0.05f;
     [SerializeField] private float maxIntensity = 0.15f;
@@ -17,7 +17,7 @@ public class AnimationLerp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pointLight = GetComponent<Light2D>();
+        pointLight = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         pointLight.intensity = minIntensity;
         defaultIntensity = pointLight.intensity;
     }
