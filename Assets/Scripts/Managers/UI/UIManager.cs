@@ -765,9 +765,18 @@ public class UIManager : ProjectManager<UIManager>
             }
             else
             {
-                Debug.Log("Begin Examen");
+                
                 CallFade();
-                AudioManager.Instance.SwapMusic(ScenesManager.Instance.GetSceneName() + " Reverse");
+
+                if(ScenesManager.Instance == null)
+                {
+                    Debug.Log("ça marche pas");
+                }
+                else
+                {
+                    AudioManager.Instance.SwapMusic(ScenesManager.Instance.GetSceneName() + "_Reverse");
+                }
+
                 CursorsManager.instance.HideCursor();
                 EnableInteractionEnvironnment();
                 HideIcons();
@@ -891,6 +900,7 @@ public class UIManager : ProjectManager<UIManager>
     {
         objectToShow.SetActive(false);
     }
+
     private void Update()
     {
         if (!isInspectingEnviro)

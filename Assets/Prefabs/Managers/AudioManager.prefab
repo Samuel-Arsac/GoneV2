@@ -106,7 +106,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - audioType: 1
-    name: Hangars Reverse
+    name: Hangars_Reverse
     clip: {fileID: 8300000, guid: 614f385ec933c8340bdea4819fdcb6a7, type: 3}
     volume: 0.3
     pitch: 1

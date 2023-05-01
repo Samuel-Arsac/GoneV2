@@ -300,7 +300,6 @@ public class UIInventory : LocalManager<UIInventory>
     public void RemoveFunctionToTrigger()
     {
         Destroy(trigger);
-
     }
 
     public void DisplayExamenUI(BaseEventData ctx)
@@ -308,7 +307,7 @@ public class UIInventory : LocalManager<UIInventory>
         PointerEventData data = ctx as PointerEventData;
         itemExamined = readItem;
         DisplayTransition();
-        AudioManager.Instance.SwapMusic("Hangars Reverse");
+        AudioManager.Instance.SwapMusic(ScenesManager.Instance.GetSceneName() + "_Reverse");
         DisplayInventory();
     }
 

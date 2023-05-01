@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using NaughtyAttributes;
 
-public class ScenesManager : LocalManager<ScenesManager>
+public class ScenesManager : ProjectManager<ScenesManager>
 {
     [SerializeField] private CharacterInfo cantTravelDialogue;
 
@@ -52,8 +52,6 @@ public class ScenesManager : LocalManager<ScenesManager>
         UIManager.Instance.SetInspectionZone();
 
         UIManager.Instance.SetCanvasInteractable();
-
-        Debug.Log(GetSceneName());
     }
 
     public void LoadGame()
