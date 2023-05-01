@@ -9,6 +9,7 @@ public class InputsManager :  LocalManager<InputsManager>
     [SerializeField] private InputSystemUIInputModule UIModule;
     public Controls controls;
     [SerializeField] private bool enableLog;
+    [SerializeField] private bool enableDebug;
 
 
     protected override void Awake()
@@ -21,7 +22,11 @@ public class InputsManager :  LocalManager<InputsManager>
         {
             controls.Keyboard.Tab.performed += LogClick;
         }
-        controls.Keyboard.EnableDebugMenu.performed += DebugMenuDisplay;
+        if(enableDebug)
+        {
+            controls.Keyboard.EnableDebugMenu.performed += DebugMenuDisplay;
+        }
+        
     }
 
     private void OnEnable()

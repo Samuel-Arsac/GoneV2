@@ -52,6 +52,8 @@ public class ScenesManager : LocalManager<ScenesManager>
         UIManager.Instance.SetInspectionZone();
 
         UIManager.Instance.SetCanvasInteractable();
+
+        Debug.Log(GetSceneName());
     }
 
     public void LoadGame()

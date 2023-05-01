@@ -765,6 +765,7 @@ public class UIManager : ProjectManager<UIManager>
             }
             else
             {
+                Debug.Log("Begin Examen");
                 CallFade();
                 AudioManager.Instance.SwapMusic(ScenesManager.Instance.GetSceneName() + " Reverse");
                 CursorsManager.instance.HideCursor();

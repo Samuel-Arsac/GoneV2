@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: Hangars
-  comeFromMenu: 0
+  comeFromMenu: 1
 --- !u!4 &442307030
 Transform:
   m_ObjectHideFlags: 0
@@ -7676,6 +7676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIModule: {fileID: 1457950170}
   enableLog: 0
+  enableDebug: 0
 --- !u!1001 &2117131210
 PrefabInstance:
   m_ObjectHideFlags: 0
