@@ -37,7 +37,11 @@ public class CinematicTyper : LocalManager<CinematicTyper>
     //Gère le fait de skip le text
     public void EndTyping(CinematicLine dialogueBox,TextMeshProUGUI textDialogue)
     {
+        if (typingCoroutine != null)
+    {
         StopCoroutine(typingCoroutine);
-        isTyping = false;
+        typingCoroutine = null;
+    }
+    isTyping = false;
     }
 }
