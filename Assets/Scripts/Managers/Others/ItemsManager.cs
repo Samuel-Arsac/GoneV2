@@ -13,7 +13,7 @@ public class ItemsManager : ProjectManager<ItemsManager>
     {
         base.Awake();
         InstantiateObject("Lettre");
-        InstantiateObject("Ticket de séjour");
+        InstantiateObject("Ticket de sÃ©jour");
     }
 
     public void InstantiateObject(string nameObject)

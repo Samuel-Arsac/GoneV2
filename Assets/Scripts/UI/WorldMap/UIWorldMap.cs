@@ -6,7 +6,7 @@ public class UIWorldMap : LocalManager<UIWorldMap>
 {
     public enum zones
     {
-        Hôtel = 0, 
+        Hotel = 0, 
         Gare = 1, 
         GrandePlace = 2, 
         Hangars = 3, 
@@ -43,7 +43,7 @@ public class UIWorldMap : LocalManager<UIWorldMap>
                 EnableActiveZoneButton(buttonsZones[5]);
                 break;
 
-            case zones.Hôtel:
+            case zones.Hotel:
                 DisableActiveZoneButton(buttonsZones[1]);
                 EnableActiveZoneButton(buttonsZones[0]);
                 EnableActiveZoneButton(buttonsZones[2]);

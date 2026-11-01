@@ -32,7 +32,7 @@ public class UIMap_Button : MonoBehaviour
             UIManager.Instance.DisableInteractionEnvironnment();
         }
 
-        else if(UIWorldMap.Instance.cantGoToHostel && (linkedZone == UIWorldMap.zones.Hôtel || linkedZone == UIWorldMap.zones.Gare))
+        else if(UIWorldMap.Instance.cantGoToHostel && (linkedZone == UIWorldMap.zones.Hotel || linkedZone == UIWorldMap.zones.Gare))
         {
             DialogueHandler.Instance.StartDialogueCantTravelAway();
             UIWorldMap.Instance.DisplayUIWordlMap();
