@@ -15,7 +15,7 @@ public class CursorsManager : MonoBehaviour
         else
             Destroy (gameObject);
     }
-
+    
     public void ChangeCursorTexture(int cursorValue)
     {
         Cursor.SetCursor(cursorsTextures[cursorValue], hotSpot, cursorMode);
